@@ -50,5 +50,5 @@ const marseilleLePanierData = {
 };
 
 export default function MarseilleLePanierPage() {
-  return <LocalPage data={marseilleLePanierData} />;
+  return <LocalPage {...marseilleLePanierData} />;
 }

@@ -50,5 +50,5 @@ const marseilleLaPlaineData = {
 };
 
 export default function MarseilleLaPlainePage() {
-  return <LocalPage data={marseilleLaPlaineData} />;
+  return <LocalPage {...marseilleLaPlaineData} />;
 }

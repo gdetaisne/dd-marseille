@@ -50,5 +50,5 @@ const marseilleLaJolietteData = {
 };
 
 export default function MarseilleLaJoliettePage() {
-  return <LocalPage data={marseilleLaJolietteData} />;
+  return <LocalPage {...marseilleLaJolietteData} />;
 }

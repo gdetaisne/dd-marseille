@@ -50,5 +50,5 @@ const marseilleLeVieuxPortData = {
 };
 
 export default function MarseilleLeVieuxPortPage() {
-  return <LocalPage data={marseilleLeVieuxPortData} />;
+  return <LocalPage {...marseilleLeVieuxPortData} />;
 }

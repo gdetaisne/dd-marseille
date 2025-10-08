@@ -6,26 +6,30 @@ interface LocalPageProps {
   zone: string;
   zoneDisplay: string;
   description: string;
-  coverImage?: string; // Image du quartier (optionnelle)
-  stats: {
+  coverImage?: string;
+  accessInfo?: string;
+  pricing?: any;
+  destinations?: any[];
+  partners?: any[];
+  stats?: {
     dossiers: string;
     demenageurs: string;
     delai: string;
   };
-  pourquoiMoverz: string;
-  accesStationnement: string;
-  destinationsFrequentes: Array<{
+  pourquoiMoverz?: string;
+  accesStationnement?: string;
+  destinationsFrequentes?: Array<{
     href: string;
     title: string;
     description: string;
   }>;
-  partenaires: Array<{
+  partenaires?: Array<{
     name: string;
     rating: number;
     reviews: number;
     specialties: string[];
   }>;
-  faq: Array<{
+  faq?: Array<{
     question: string;
     answer: string;
   }>;
@@ -34,13 +38,13 @@ interface LocalPageProps {
 export function generateLocalPageMetadata(zone: string, zoneDisplay: string): Metadata {
   return {
     title: `Déménageur ${zoneDisplay} — Comparez des devis fiables | Moverz`,
-    description: `Préparez votre dossier en 30 min. Au moins 3 devis personnalisés sous 7 jours pour ${zoneDisplay} (Marseille).`,
+    description: `Préparez votre dossier en 30 min. Au moins 3 devis personnalisés sous 7 jours pour ${zoneDisplay} (marseille).`,
     alternates: {
       canonical: `https://www.marseille-demenageur.fr/${zone}`,
     },
     openGraph: {
       title: `Déménageur ${zoneDisplay} — Comparez des devis fiables | Moverz`,
-      description: `Préparez votre dossier en 30 min. Au moins 3 devis personnalisés sous 7 jours pour ${zoneDisplay} (Marseille).`,
+      description: `Préparez votre dossier en 30 min. Au moins 3 devis personnalisés sous 7 jours pour ${zoneDisplay} (marseille).`,
       url: `https://www.marseille-demenageur.fr/${zone}`,
       type: 'website',
     },
@@ -56,7 +60,7 @@ export function generateLocalPageJsonLd(zone: string, zoneDisplay: string) {
       "@type": "Organization",
       "name": "Moverz"
     },
-    "areaServed": `Marseille — ${zoneDisplay}`,
+    "areaServed": `marseille — ${zoneDisplay}`,
     "serviceType": "Mise en relation et comparaison de devis"
   };
 }
@@ -110,7 +114,7 @@ export default function LocalPage({
                     <span className="text-4xl">📍</span>
                     <div className="text-left">
                       <div className="text-white font-bold text-2xl">{zoneDisplay}</div>
-                      <div className="text-white/80 text-sm">Marseille</div>
+                      <div className="text-white/80 text-sm">marseille</div>
                     </div>
                   </div>
                 </div>
@@ -238,7 +242,7 @@ export default function LocalPage({
             Destinations couvertes
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Marseille intra-muros', 'Gironde', 'Nouvelle-Provence-Alpes-Côte d'Azur', 'France entière', 'Europe'].map((dest) => (
+            {['marseille intra-muros', 'Gironde', 'Pays de la Loire', 'France entière', 'Europe'].map((dest) => (
               <span key={dest} className="bg-[#6bcfcf]/20 text-[#6bcfcf] px-4 py-2 rounded-full text-sm">
                 {dest}
               </span>

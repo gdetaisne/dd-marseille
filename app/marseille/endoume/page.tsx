@@ -50,5 +50,5 @@ const marseilleEndoumeData = {
 };
 
 export default function MarseilleEndoumePage() {
-  return <LocalPage data={marseilleEndoumeData} />;
+  return <LocalPage {...marseilleEndoumeData} />;
 }
