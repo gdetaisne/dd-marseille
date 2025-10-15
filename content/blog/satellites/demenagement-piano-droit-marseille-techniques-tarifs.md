@@ -14,7 +14,7 @@ publish_date: "2025-04-25"
 
 Spécialistes Marseille : Amice Déménagement (8e, 4,7/5) expert objets fragiles pianos, matériel adapté (sangles piano, couvertures épaisses, chariots renforcés), assurance valeur instrument. Cardi (10e, 4,8/5) et Phocéen (2e, 4,7/5) gèrent aussi pianos avec précautions.
 
-Techniques : Piano droit 2-3 déménageurs, sangles spéciales, protection multicouche, démontage pieds si passage serré. Piano queue : Démontage pieds + lyre obligatoire, 3-4 déménageurs, parfois grue si > 500kg ou accès impossible, protection renforcée table harmonique.
+Techniques : Piano droit 2-3 déménageurs, sangles spéciales, protection multicouche, démontage pieds si passage serré. Piano queue : Démontage pieds + lyre obligatoire, 3-4 déménageurs, parfois grue si > 500kg ou accès impossible, protection renforcée table harmonique. Ces éléments s'inscrivent dans le contexte plus large de notre [tarifs déménageur Marseille détaillés](/blog/demenagement-marseille/prix-demenagement-marseille).
 
 Conservatoire Marseille (1er arr.) : Transport instruments classiques (pianos, harpes, contrebasses), coordinations multiples, horaires adaptés cours, assurances spécifiques instruments valeur 20 000-100 000€. Assurance piano : Valeur déclarée obligatoire, 2-3% valeur (piano 15 000€ = 300-450€ assurance), Steinway/Bösendorfer nécessitent expert.
 
@@ -25,6 +25,10 @@ Préparation : Accordage post-déménagement obligatoire (80-120€ Marseille), 
 ---
 
 ## Sources
+
+Pour comprendre tous les aspects de ce sujet, consultez notre [guide des prix déménagement à Marseille](/blog/demenagement-marseille/prix-demenagement-marseille).
+
+Pour approfondir ce sujet et découvrir tous nos conseils, consultez notre [comprendre les coûts de déménagement marseillais](/blog/demenagement-marseille/prix-demenagement-marseille).
 
 1. Fiche locale - Piano Amice (13 octobre 2025)
 2. Conservatoire Marseille (2024-2025)

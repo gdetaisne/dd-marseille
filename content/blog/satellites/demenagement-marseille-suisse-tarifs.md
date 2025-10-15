@@ -14,7 +14,7 @@ publish_date: "2025-04-10"
 
 Container maritime : 20' (33m³) 3 000-5 000€, 40' (67m³) 5 000-8 000€. Port Marseille GPMM 1er France, connexions méditerranée. Délais : Europe 1-2 sem routier, Overseas maritime 6-12 sem. Douanes : Documents (inventaire, factures, passeport), taxes variables selon pays, assistance obligatoire.
 
-Acteurs Marseille : Méditerranée Déménagement (7e, 4,6/5) spéc international/overseas, Pradal (9e, 4,7/5) Europe et longue distance, Azur Déménagement (9e, 4,5/5) Côte d'Azur-Europe. Assurance multirisque 2-3% valeur déclarée obligatoire international.
+Acteurs Marseille : Méditerranée Déménagement (7e, 4,6/5) spéc international/overseas, Pradal (9e, 4,7/5) Europe et longue distance, Azur Déménagement (9e, 4,5/5) Côte d'Azur-Europe. Assurance multirisque 2-3% valeur déclarée obligatoire international. Ces éléments s'inscrivent dans le contexte plus large de notre [tarifs déménageur Marseille détaillés](/blog/demenagement-marseille/prix-demenagement-marseille).
 
 Spécificités Marseille : Proximité Port favorise maritimes Afrique Nord et Méditerranée, communauté importante Algérie/Maroc/Tunisie (ferry réguliers), position géo stratégique Europe Sud.
 
@@ -23,6 +23,10 @@ Spécificités Marseille : Proximité Port favorise maritimes Afrique Nord et M�
 ---
 
 ## Sources
+
+
+Pour approfondir ce sujet et découvrir tous nos conseils, consultez notre [comprendre les coûts de déménagement marseillais](/blog/demenagement-marseille/prix-demenagement-marseille).
+Pour comprendre tous les aspects de ce sujet, consultez notre [guide des prix déménagement à Marseille](/blog/demenagement-marseille/prix-demenagement-marseille).
 
 1. Port Marseille GPMM - Données (2024-2025)
 2. Méditerranée Déménagement, Pradal - Tarifs int (oct 2025)
