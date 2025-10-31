@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import LocalPage from '@/app/_templates/LocalPage';
+import { generateLocalPageMetadata } from '@/app/_templates/LocalPage';
 
-export const metadata: Metadata = {
-  title: `Déménagement à Endoume (Marseille) | Devis gratuit & IA`,
-  description: `Déménagement à Endoume (Marseille). Quartier résidentiel de Marseille, proche de la mer. Maisons bourgeoises et vue sur mer. Accès: Rues en pente, parkings privés, maisons individuelles. Devis gratuit avec estimation IA.`,
-  keywords: `déménagement Endoume Marseille, déménageurs Marseille, devis déménagement Marseille, Rues en pente, parkings privés, maisons individuelles`,
-};
+export const metadata: Metadata = generateLocalPageMetadata('endoume', 'Endoume');
+
 
 const marseilleEndoumeData = {
   zone: "endoume",

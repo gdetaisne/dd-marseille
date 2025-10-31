@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import LocalPage from '@/app/_templates/LocalPage';
+import { generateLocalPageMetadata } from '@/app/_templates/LocalPage';
 
-export const metadata: Metadata = {
-  title: `Déménagement à La Joliette (Marseille) | Devis gratuit & IA`,
-  description: `Déménagement à La Joliette (Marseille). Quartier en reconversion de Marseille, Euroméditerranée. Logements modernes et accès facilité. Accès: Boulevards larges, parkings souterrains, immeubles récents. Devis gratuit avec estimation IA.`,
-  keywords: `déménagement La Joliette Marseille, déménageurs Marseille, devis déménagement Marseille, Boulevards larges, parkings souterrains, immeubles récents`,
-};
+export const metadata: Metadata = generateLocalPageMetadata('joliette', 'La Joliette');
+
 
 const marseilleLaJolietteData = {
   zone: "joliette",

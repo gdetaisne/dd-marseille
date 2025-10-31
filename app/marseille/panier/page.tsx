@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import LocalPage from '@/app/_templates/LocalPage';
+import { generateLocalPageMetadata } from '@/app/_templates/LocalPage';
 
-export const metadata: Metadata = {
-  title: `Déménagement à Le Panier (Marseille) | Devis gratuit & IA`,
-  description: `Déménagement à Le Panier (Marseille). Quartier historique de Marseille, plus ancien de France. Rues pavées et patrimoine. Accès très délicat. Accès: Rues étroites, escaliers nombreux, parkings inexistants, circulation piétonne. Devis gratuit avec estimation IA.`,
-  keywords: `déménagement Le Panier Marseille, déménageurs Marseille, devis déménagement Marseille, Rues étroites, escaliers nombreux, parkings inexistants, circulation piétonne`,
-};
+export const metadata: Metadata = generateLocalPageMetadata('panier', 'Le Panier');
+
 
 const marseilleLePanierData = {
   zone: "panier",

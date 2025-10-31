@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import LocalPage from '@/app/_templates/LocalPage';
+import { generateLocalPageMetadata } from '@/app/_templates/LocalPage';
 
-export const metadata: Metadata = {
-  title: `Déménagement à La Plaine (Marseille) | Devis gratuit & IA`,
-  description: `Déménagement à La Plaine (Marseille). Quartier populaire et commerçant de Marseille, marché aux puces. Mixité sociale et accès varié. Accès: Rues commerçantes, parkings limités, mixité ancien/moderne. Devis gratuit avec estimation IA.`,
-  keywords: `déménagement La Plaine Marseille, déménageurs Marseille, devis déménagement Marseille, Rues commerçantes, parkings limités, mixité ancien/moderne`,
-};
+export const metadata: Metadata = generateLocalPageMetadata('plaine', 'La Plaine');
+
 
 const marseilleLaPlaineData = {
   zone: "plaine",

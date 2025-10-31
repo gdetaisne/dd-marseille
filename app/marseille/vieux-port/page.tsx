@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import LocalPage from '@/app/_templates/LocalPage';
+import { generateLocalPageMetadata } from '@/app/_templates/LocalPage';
 
-export const metadata: Metadata = {
-  title: `Déménagement à Le Vieux-Port (Marseille) | Devis gratuit & IA`,
-  description: `Déménagement à Le Vieux-Port (Marseille). Cœur historique de Marseille, port antique et patrimoine. Rues étroites et commerces. Accès délicat. Accès: Rues étroites, circulation limitée, parkings payants, escaliers anciens. Devis gratuit avec estimation IA.`,
-  keywords: `déménagement Le Vieux-Port Marseille, déménageurs Marseille, devis déménagement Marseille, Rues étroites, circulation limitée, parkings payants, escaliers anciens`,
-};
+export const metadata: Metadata = generateLocalPageMetadata('vieux-port', 'Le Vieux-Port');
+
 
 const marseilleLeVieuxPortData = {
   zone: "vieux-port",
