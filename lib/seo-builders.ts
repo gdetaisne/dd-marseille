@@ -46,13 +46,16 @@ export function buildSiteMetadata(options: SiteMetadataOptions = {}): Metadata {
       `Estimation par photos en 30 min → 5 devis personnalisés de déménageurs. 100% gratuit. Économisez jusqu'à 40% sur votre déménagement à ${city.nameCapitalized}.`;
   }
 
+  // Forcer le slash final pour TOUT (metadataBase ET canonical)
+  const siteUrlWithSlash = city.siteUrl.endsWith('/') ? city.siteUrl : `${city.siteUrl}/`;
+
   return {
     title: {
       default: defaultTitle,
       template: templateTitle,
     },
     description: defaultDescription,
-    metadataBase: new URL(city.siteUrl),
+    metadataBase: new URL(siteUrlWithSlash),
     robots: {
       index: true,
       follow: true,
@@ -67,13 +70,13 @@ export function buildSiteMetadata(options: SiteMetadataOptions = {}): Metadata {
     openGraph: {
       type: 'website',
       locale: 'fr_FR',
-      url: city.siteUrl,
+      url: siteUrlWithSlash,
       siteName: `Comparateur Déménagement ${city.nameCapitalized}`,
       title: defaultTitle,
       description: defaultDescription,
       images: [
         {
-          url: `${city.siteUrl}/og-image.jpg`,
+          url: `${siteUrlWithSlash}og-image.jpg`,
           width: 1200,
           height: 630,
           alt: `Comparateur Déménagement ${city.nameCapitalized} - 5 Devis Gratuits`,
@@ -84,10 +87,11 @@ export function buildSiteMetadata(options: SiteMetadataOptions = {}): Metadata {
       card: 'summary_large_image',
       title: defaultTitle,
       description: defaultDescription,
-      images: [`${city.siteUrl}/og-image.jpg`],
+      images: [`${siteUrlWithSlash}og-image.jpg`],
     },
     alternates: {
-      canonical: city.siteUrl,
+      // FORCER le slash final (Next.js l'enlève parfois sur homepage)
+      canonical: siteUrlWithSlash,
     },
     icons: {
       icon: '/favicon.ico',

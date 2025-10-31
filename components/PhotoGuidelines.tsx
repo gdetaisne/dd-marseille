@@ -118,7 +118,7 @@ export default function PhotoGuidelines({
         {false && (
           <div className="mt-6 md:mt-8">
             <a
-              href="/exemples-photos"
+              href="/exemples-photos/"
               className={clsx(
                 "inline-flex items-center gap-2 rounded-xl border px-4 py-2",
                 "border-white/20 bg-white/0 text-white hover:bg-white/10",

@@ -31,7 +31,7 @@ export const cityData: Record<string, CityData> = {
     name: 'Marseille',
     nameCapitalized: 'Marseille',
     region: 'Provence-Alpes-Côte d\'Azur',
-    siteUrl: 'https://devis-demenageur-marseille.fr',
+    siteUrl: 'https://devis-demenageur-marseille.fr/',
     coordinates: {
       latitude: 43.2965,
       longitude: 5.3698

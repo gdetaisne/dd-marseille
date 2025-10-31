@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { getCanonicalUrl } from '@/lib/canonical-helper';
 
 interface CorridorPageProps {
   destination: string;
@@ -20,16 +21,18 @@ interface CorridorPageProps {
 }
 
 export function generateCorridorPageMetadata(destination: string): Metadata {
+  const canonicalUrl = getCanonicalUrl(`marseille-vers-${destination.toLowerCase()}`);
+  
   return {
     title: `Déménagement Marseille → ${destination} — Comparez des devis | Moverz`,
     description: `Un seul dossier, 20 déménageurs qualifiés. 3 devis sous 7 jours pour Marseille → ${destination}.`,
     alternates: {
-      canonical: `https://www.marseille-demenageur.fr/marseille-vers-${destination.toLowerCase()}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: `Déménagement Marseille → ${destination} — Comparez des devis | Moverz`,
       description: `Un seul dossier, 20 déménageurs qualifiés. 3 devis sous 7 jours pour Marseille → ${destination}.`,
-      url: `https://www.marseille-demenageur.fr/marseille-vers-${destination.toLowerCase()}`,
+      url: canonicalUrl,
       type: 'website',
     },
   };
@@ -80,7 +83,7 @@ export default function CorridorPage({
                 30 min pour préparer votre dossier • ≥ 3 devis personnalisés sous 7 jours
               </p>
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex h-14 items-center justify-center rounded-2xl bg-[#2b7a78] px-8 text-lg font-medium text-white shadow-marketing-xl hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 transition duration-300"
               >
                 Préparez votre demande en 30 min — recevez 3 devis sous 7 jours
@@ -204,13 +207,13 @@ export default function CorridorPage({
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                href="/marseille"
+                href="/marseille/"
                 className="bg-[#6bcfcf]/20 text-[#6bcfcf] px-6 py-3 rounded-full hover:bg-[#6bcfcf]/30 transition-colors"
               >
                 Voir Marseille
               </Link>
               <Link
-                href="/services/demenagement-standard-marseille"
+                href="/services/demenagement-standard-marseille/"
                 className="bg-[#6bcfcf]/20 text-[#6bcfcf] px-6 py-3 rounded-full hover:bg-[#6bcfcf]/30 transition-colors"
               >
                 Service Standard
@@ -244,7 +247,7 @@ export default function CorridorPage({
               Préparez votre dossier en 30 minutes et recevez 3 devis personnalisés sous 7 jours
             </p>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex h-12 items-center justify-center rounded-2xl bg-white text-[#2b7a78] px-8 font-medium hover:bg-white/90 transition-colors"
             >
               Préparez votre demande en 30 min — recevez 3 devis sous 7 jours

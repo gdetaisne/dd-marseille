@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { getCanonicalUrl } from "@/lib/canonical-helper";
 
 import type { Metadata } from 'next'
 
@@ -7,12 +8,12 @@ export const metadata: Metadata = {
   title: "Comment ça marche ? Déménagement Marseille en 3 étapes | Moverz",
   description: "Découvrez notre processus simple pour déménager à Marseille : 1) Inventaire IA gratuit en 30 min 2) Recevez 3 devis sous 7j 3) Choisissez votre déménageur. 100% gratuit, sans engagement.",
   alternates: {
-    canonical: `https://www.devis-demenageur-marseille.fr/comment-ca-marche`,
+    canonical: getCanonicalUrl('comment-ca-marche'),
   },
   openGraph: {
     title: "Comment ça marche ? Déménagement Marseille simplifié | Moverz",
     description: "Processus simple et transparent : photos + IA + devis personnalisés. Déménagez sereinement à Marseille.",
-    url: `https://www.devis-demenageur-marseille.fr/comment-ca-marche`,
+    url: getCanonicalUrl('comment-ca-marche'),
     type: 'website',
   },
 }
@@ -43,7 +44,7 @@ export default function CommentCaMarchePage() {
             <Breadcrumbs 
               items={[
                 { label: "Accueil", href: "/" },
-                { label: "Comment ça marche", href: "/comment-ca-marche" }
+                { label: "Comment ça marche", href: "/comment-ca-marche/" }
               ]}
             />
             <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

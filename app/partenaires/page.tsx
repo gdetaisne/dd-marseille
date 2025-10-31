@@ -4,17 +4,18 @@ import CtaPrimary from "@/components/CtaPrimary";
 import Section from "@/components/Section";
 import PartnerCard from "@/components/PartnerCard";
 import PartnersList from "@/components/PartnersList";
+import { getCanonicalUrl } from "@/lib/canonical-helper";
 
 export const metadata: Metadata = {
   title: "Partenaires déménageurs - Déménageurs Marseille (IA)",
   description: "Découvrez nos partenaires déménageurs certifiés à Marseille. Qualité garantie, tarifs transparents, service client premium.",
   alternates: {
-    canonical: "https://www.marseille-demenageur.fr/partenaires/",
+    canonical: getCanonicalUrl('partenaires'),
   },
   openGraph: {
     title: "Partenaires déménageurs - Déménageurs Marseille (IA)",
     description: "Découvrez nos partenaires déménageurs certifiés à Marseille. Qualité garantie, tarifs transparents, service client premium.",
-    url: "https://www.marseille-demenageur.fr/partenaires/",
+    url: getCanonicalUrl('partenaires'),
     type: "website",
   },
 };

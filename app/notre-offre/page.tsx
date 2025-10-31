@@ -26,7 +26,7 @@ export default function NotreOffrePage() {
             <Breadcrumbs 
               items={[
                 { label: "Accueil", href: "/" },
-                { label: "Comment ça marche", href: "/comment-ca-marche" }
+                { label: "Comment ça marche", href: "/comment-ca-marche/" }
               ]}
             />
             <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -457,7 +457,7 @@ export default function NotreOffrePage() {
                 Estimez gratuitement votre volume
               </a>
               <a
-                href="/faq"
+                href="/faq/"
                 className="inline-flex h-12 items-center justify-center rounded-2xl bg-white/10 border border-white/20 px-8 text-lg font-medium text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 transition duration-300"
               >
                 Consultez nos FAQ

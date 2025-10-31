@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://devis-demenageur-marseille.fr',
+  siteUrl: process.env.SITE_URL || 'https://devis-demenageur-marseille.fr/',
   generateRobotsTxt: true,
   exclude: ['/api/*'], // Exclure les routes API du sitemap
   robotsTxtOptions: {

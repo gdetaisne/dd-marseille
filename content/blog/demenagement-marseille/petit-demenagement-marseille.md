@@ -476,6 +476,8 @@ Une fois le devis validé :
 *"Petit déménagement T1 du Cours Julien vers Noailles (500 mètres !). Formule transport seul : j'avais tout emballé, ils ont chargé, transporté et déchargé en 2h. 320€ pour un service pro. Parfait pour mon budget serré."*  
 — Sophie, 28 ans, Marseille 6ème
 
+**Studio ou petit volume à déménager à Marseille ?** Utilisez notre [comparateur déménageurs petits volumes Marseille](/) spécialisés dans les studios et T1. Obtenez 5 devis adaptés à votre situation, formules économiques disponibles. Déménageurs petits volumes vérifiés à Marseille.
+
 ## Demandez votre devis gratuit pour un petit déménagement à Marseille !
 
 Vous l'avez compris : un petit déménagement à Marseille mérite une solution sur mesure, adaptée à votre volume, votre budget et vos contraintes. Ne payez pas pour un service surdimensionné. Choisissez la formule qui vous correspond.

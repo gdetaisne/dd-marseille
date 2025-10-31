@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getCanonicalUrl } from '@/lib/canonical-helper';
+import { getCityDataFromUrl } from '@/lib/cityData';
+import { env } from '@/lib/env';
 
 interface LocalPageProps {
   zone: string;
@@ -36,13 +39,27 @@ interface LocalPageProps {
 }
 
 export function generateLocalPageMetadata(zone: string, zoneDisplay: string): Metadata {
+  const city = getCityDataFromUrl(env.SITE_URL);
+  const canonicalUrl = getCanonicalUrl(`${city.slug}/${zone}`);
+  
   return {
-    title: `Déménagement ${zoneDisplay} Marseille - Tarifs & Devis Gratuit | Moverz`,
-    description: `Déménageur local ${zoneDisplay} à Marseille : tarifs détaillés, disponibilités immédiates. Devis personnalisé gratuit sous 7j. Équipe locale expérimentée. Réservation en ligne simple.`,
+    title: `Déménagement ${zoneDisplay} ${city.nameCapitalized} - Tarifs & Devis Gratuit | Moverz`,
+    description: `Déménageur local ${zoneDisplay} à ${city.nameCapitalized} : tarifs détaillés, disponibilités immédiates. Devis personnalisé gratuit sous 7j. Équipe locale expérimentée. Réservation en ligne simple.`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `Déménagement ${zoneDisplay} ${city.nameCapitalized}`,
+      description: `Déménageur local ${zoneDisplay} à ${city.nameCapitalized}`,
+      url: canonicalUrl,
+      type: 'website',
+    },
   };
 }
 
 export function generateLocalPageJsonLd(zone: string, zoneDisplay: string) {
+  const city = getCityDataFromUrl(env.SITE_URL);
+  
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -51,7 +68,7 @@ export function generateLocalPageJsonLd(zone: string, zoneDisplay: string) {
       "@type": "Organization",
       "name": "Moverz"
     },
-    "areaServed": `toulouse — ${zoneDisplay}`,
+    "areaServed": `${city.nameCapitalized} — ${zoneDisplay}`,
     "serviceType": "Mise en relation et comparaison de devis"
   };
 }
@@ -112,7 +129,7 @@ export default function LocalPage({
               )}
               
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex h-14 items-center justify-center rounded-2xl bg-[#2b7a78] px-8 text-lg font-medium text-white shadow-marketing-xl hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 transition duration-300"
               >
                 Préparez votre demande en 30 min — recevez 3 devis sous 7 jours
@@ -294,7 +311,7 @@ export default function LocalPage({
           </div>
           <div className="text-center mt-8">
             <Link
-              href="/partenaires"
+              href="/partenaires/"
               className="text-[#6bcfcf] hover:text-white transition-colors"
             >
               Voir tous nos partenaires →
@@ -330,7 +347,7 @@ export default function LocalPage({
               Préparez votre dossier en 30 minutes et recevez 3 devis personnalisés sous 7 jours
             </p>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex h-12 items-center justify-center rounded-2xl bg-white text-[#2b7a78] px-8 font-medium hover:bg-white/90 transition-colors"
             >
               Préparez votre demande en 30 min — recevez 3 devis sous 7 jours

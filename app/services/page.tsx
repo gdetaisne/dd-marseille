@@ -27,7 +27,7 @@ export default function ServicesPage() {
             <Breadcrumbs 
               items={[
                 { label: "Accueil", href: "/" },
-                { label: "Services", href: "/services" }
+                { label: "Services", href: "/services/" }
               ]}
             />
             <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
@@ -103,7 +103,7 @@ export default function ServicesPage() {
                 <div className="text-2xl font-bold text-white mb-2">À partir de 450€</div>
                 <p className="text-white/60 text-sm mb-6">Local Marseille</p>
                 <a
-                  href="/services/demenagement-economique-Marseille"
+                  href="/services/demenagement-economique-Marseille/"
                   className="inline-flex items-center justify-center w-full px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-medium hover:bg-white/20 transition duration-300"
                 >
                   Découvrir cette formule
@@ -174,7 +174,7 @@ export default function ServicesPage() {
                 <div className="text-2xl font-bold text-white mb-2">À partir de 750€</div>
                 <p className="text-white/60 text-sm mb-6">Local Marseille</p>
                 <a
-                  href="/services/demenagement-standard-Marseille"
+                  href="/services/demenagement-standard-Marseille/"
                   className="inline-flex items-center justify-center w-full px-6 py-3 rounded-xl bg-[#6bcfcf] text-[#04163a] font-medium hover:bg-[#6bcfcf]/90 transition duration-300"
                 >
                   Découvrir cette formule
@@ -247,7 +247,7 @@ export default function ServicesPage() {
                 <div className="text-2xl font-bold text-white mb-2">À partir de 1200€</div>
                 <p className="text-white/60 text-sm mb-6">Local Marseille</p>
                 <a
-                  href="/services/demenagement-premium-Marseille"
+                  href="/services/demenagement-premium-Marseille/"
                   className="inline-flex items-center justify-center w-full px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-medium hover:bg-white/20 transition duration-300"
                 >
                   Découvrir cette formule

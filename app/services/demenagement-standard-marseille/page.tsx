@@ -16,8 +16,8 @@ export default function DemenagementStandardPage() {
             <Breadcrumbs 
               items={[
                 { label: "Accueil", href: "/" },
-                { label: "Services", href: "/services" },
-                { label: "Déménagement Standard", href: "/services/demenagement-standard-marseille" }
+                { label: "Services", href: "/services/" },
+                { label: "Déménagement Standard", href: "/services/demenagement-standard-marseille/" }
               ]}
             />
             <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

@@ -68,7 +68,7 @@ export default function LocalMoneyFAQ({ citySlug, cityName }: LocalMoneyFAQProps
 
         <div className="mt-8 text-center">
           <a
-            href="/faq"
+            href="/faq/"
             className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium transition-colors"
           >
             Voir toutes les FAQ

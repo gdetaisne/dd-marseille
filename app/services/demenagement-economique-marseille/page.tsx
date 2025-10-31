@@ -16,8 +16,8 @@ export default function DemenagementEconomiquePage() {
             <Breadcrumbs 
               items={[
                 { label: "Accueil", href: "/" },
-                { label: "Services", href: "/services" },
-                { label: "Déménagement Économique", href: "/services/demenagement-economique-marseille" }
+                { label: "Services", href: "/services/" },
+                { label: "Déménagement Économique", href: "/services/demenagement-economique-marseille/" }
               ]}
             />
             <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

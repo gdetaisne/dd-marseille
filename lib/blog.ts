@@ -96,7 +96,7 @@ function cleanSlug(originalSlug: string, category: string): string {
 }
 
 export function getAllBlogPosts(): BlogPost[] {
-  const monorepoDir = path.join(process.cwd(), 'sites/rouen/content/blog');
+  const monorepoDir = path.join(process.cwd(), 'sites/marseille/content/blog');
   const standaloneDir = path.join(process.cwd(), 'content/blog');
   const blogDirectory = fs.existsSync(monorepoDir)
     ? monorepoDir

@@ -86,7 +86,7 @@ export default function ContactPage() {
         <div className="mt-12 bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10">
           <div className="text-center">
             <a 
-              href="/inventaire-ia" 
+              href="/inventaire-ia/" 
               className="inline-flex h-12 items-center justify-center rounded-2xl bg-[#6bcfcf] px-8 text-lg font-semibold text-[#04163a] shadow-lg hover:bg-[#6bcfcf]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6bcfcf]/50 transition duration-300"
             >
               Obtenez vos devis précis gratuitement
@@ -119,7 +119,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="text-center mt-6">
-            <a href="/faq" className="text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors underline">
+            <a href="/faq/" className="text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors underline">
               Voir toutes les questions fréquentes
             </a>
           </div>

@@ -94,16 +94,16 @@ function Footer() {
           <div className="text-sm font-semibold text-white">Navigation</div>
           <ul className="mt-3 space-y-2 text-sm text-white/90">
             <li><Link href="/services/" className="hover:text-white">Services</Link></li>
-            <li><Link href={`/${city.slug}`} className="hover:text-white">Zones desservies</Link></li>
+            <li><Link href={`/${city.slug}/`} className="hover:text-white">Zones desservies</Link></li>
             <li><Link href="/partenaires/" className="hover:text-white">Partenaires</Link></li>
           </ul>
         </div>
         <div>
           <div className="text-sm font-semibold text-white">Ressources</div>
           <ul className="mt-3 space-y-2 text-sm text-white/90">
-            <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+            <li><Link href="/blog/" className="hover:text-white">Blog</Link></li>
             <li><Link href="/faq/" className="hover:text-white">FAQ</Link></li>
-            <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+            <li><Link href="/contact/" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
         <div>

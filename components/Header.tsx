@@ -75,7 +75,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {/* Comment ça marche Button */}
           <Link 
-            href="/comment-ca-marche" 
+            href="/comment-ca-marche/" 
             className="hover:text-brand-secondary transition-colors"
             onClick={() => trackClick('comment-ca-marche')}
           >
@@ -84,7 +84,7 @@ export default function Header() {
 
           {/* Services Button */}
           <Link 
-            href="/services" 
+            href="/services/" 
             className="hover:text-brand-secondary transition-colors"
             onClick={() => trackClick('services')}
           >
@@ -137,7 +137,7 @@ export default function Header() {
                   Destinations fréquentes
                 </div>
                 <Link
-                  href="/Marseille-vers-paris"
+                  href="/Marseille-vers-paris/"
                   className="block px-4 py-2 text-gray-800 hover:bg-white/50 transition-colors"
                   onClick={() => {
                     setIsZonesDropdownOpen(false);
@@ -147,7 +147,7 @@ export default function Header() {
                   Marseille → Paris
                 </Link>
                 <Link
-                  href="/Marseille-vers-lyon"
+                  href="/Marseille-vers-lyon/"
                   className="block px-4 py-2 text-gray-800 hover:bg-white/50 transition-colors"
                   onClick={() => {
                     setIsZonesDropdownOpen(false);
@@ -157,7 +157,7 @@ export default function Header() {
                   Marseille → Lyon
                 </Link>
                 <Link
-                  href="/Marseille-vers-toulouse"
+                  href="/Marseille-vers-toulouse/"
                   className="block px-4 py-2 text-gray-800 hover:bg-white/50 transition-colors"
                   onClick={() => {
                     setIsZonesDropdownOpen(false);
@@ -171,21 +171,21 @@ export default function Header() {
           </div>
 
           <Link 
-            href="/partenaires" 
+            href="/partenaires/" 
             className="hover:text-brand-secondary transition-colors"
             onClick={() => trackClick('partenaires')}
           >
             Partenaires
           </Link>
           <Link 
-            href="/blog" 
+            href="/blog/" 
             className="hover:text-brand-secondary transition-colors"
             onClick={() => trackClick('blog')}
           >
             Blog
           </Link>
           <Link 
-            href="/faq" 
+            href="/faq/" 
             className="hover:text-brand-secondary transition-colors"
             onClick={() => trackClick('faq')}
           >
@@ -196,7 +196,7 @@ export default function Header() {
         {/* CTA Button */}
         <div className="flex items-center gap-3">
           <Link 
-            href="/inventaire-ia" 
+            href="/inventaire-ia/" 
             className="hidden sm:inline-flex h-11 items-center justify-center rounded-2xl bg-[#2b7a78] px-5 text-sm font-medium text-white shadow-marketing-xl hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 transition duration-300"
             onClick={() => trackClick('cta-header')}
           >
@@ -227,7 +227,7 @@ export default function Header() {
           <div className="container max-w-7xl mx-auto px-4 py-4 space-y-4">
             {/* Comment ça marche */}
             <Link
-              href="/comment-ca-marche"
+              href="/comment-ca-marche/"
               className="block text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors"
               onClick={() => {
                 setIsMobileMenuOpen(false);
@@ -239,7 +239,7 @@ export default function Header() {
 
             {/* Services */}
             <Link
-              href="/services"
+              href="/services/"
               className="block text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors"
               onClick={() => {
                 setIsMobileMenuOpen(false);
@@ -272,7 +272,7 @@ export default function Header() {
             {/* Autres liens */}
             <div className="space-y-2">
               <Link
-                href="/partenaires"
+                href="/partenaires/"
                 className="block text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
@@ -282,7 +282,7 @@ export default function Header() {
                 Partenaires
               </Link>
               <Link
-                href="/blog"
+                href="/blog/"
                 className="block text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
@@ -292,7 +292,7 @@ export default function Header() {
                 Blog
               </Link>
               <Link
-                href="/faq"
+                href="/faq/"
                 className="block text-sm font-semibold text-gray-800 hover:text-gray-600 transition-colors"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
@@ -306,7 +306,7 @@ export default function Header() {
             {/* CTA Mobile */}
             <div className="pt-4 border-t border-gray-200">
               <Link
-                href="/inventaire-ia"
+                href="/inventaire-ia/"
                 className="block w-full text-center h-11 items-center justify-center rounded-2xl bg-[#2b7a78] px-5 text-sm font-medium text-white shadow-marketing-xl hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 transition duration-300"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
