@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { getCanonicalUrl } from '@/lib/canonical-helper';
 
 interface BlogPostPageProps {
   params: {
@@ -34,13 +35,19 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  const canonicalUrl = getCanonicalUrl(`blog/${params.category}/${params.slug}`);
+
   return {
     title: post.meta_title || post.title,
     description: post.meta_description,
     keywords: post.keywords.join(', '),
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: post.title,
       description: post.meta_description,
+      url: canonicalUrl,
       type: 'article',
       publishedTime: post.publish_date,
     },
@@ -126,7 +133,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <Breadcrumbs 
             items={[
               { label: "Accueil", href: "/" },
-              { label: "Blog", href: "/blog/" },
+              { label: "Blog", href: "/blog" },
               { label: categoryLabel, href: `/blog/${post.cleanCategory}` },
               { label: post.title, href: `/blog/${post.cleanCategory}/${post.cleanSlug}` }
             ]}
@@ -172,11 +179,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             Besoin d'aide pour votre déménagement ?
           </h3>
           <p className="text-white/80 mb-6">
-            Notre équipe de déménageurs professionnels à Marseille est à votre disposition 
+            Notre équipe de déménageurs professionnels à lille est à votre disposition 
             pour vous accompagner dans votre projet.
           </p>
           <Link 
-            href="/inventaire-ia/" 
+            href="/inventaire-ia" 
             className="inline-flex items-center px-6 py-3 rounded-2xl bg-[#2b7a78] text-white font-medium hover:brightness-110 transition duration-300"
           >
             Obtenir un devis gratuit

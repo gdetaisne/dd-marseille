@@ -1,8 +1,18 @@
 import { Metadata } from 'next';
+import { getCanonicalUrl } from '@/lib/canonical-helper';
 
 export const metadata: Metadata = {
-  title: 'Contact Déménagement Marseille | Devis Gratuits | Moverz',
-  description: 'Contactez nos experts déménageurs à Marseille. Estimation gratuite en 30 min, 5 devis précis sous 7 jours.',
+  title: 'Contact Déménagement lille | Devis Gratuits | Moverz',
+  description: 'Contactez nos experts déménageurs à lille. Estimation gratuite en 30 min, 5 devis précis sous 7 jours.',
+  alternates: {
+    canonical: getCanonicalUrl('contact'),
+  },
+  openGraph: {
+    title: 'Contact Déménagement Lille',
+    description: 'Contactez nos experts déménageurs à Lille',
+    url: getCanonicalUrl('contact'),
+    type: 'website',
+  },
 };
 
 export default function ContactPage() {
@@ -14,7 +24,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <img 
             src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2000&auto=format&fit=crop"
-            alt="Contactez notre équipe de déménagement à Marseille"
+            alt="Contactez notre équipe de déménagement à lille"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/85 to-[#04163a]/90"></div>
@@ -70,8 +80,8 @@ export default function ContactPage() {
             <div className="space-y-4 text-white/80">
               <div>
                 <p className="font-medium text-white mb-2">Email</p>
-                <a href="mailto:contact@devis-demenageur-marseille.fr" className="text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors">
-                  contact@devis-demenageur-marseille.fr
+                <a href="mailto:contact@devis-demenageur-lille.fr" className="text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors">
+                  contact@devis-demenageur-lille.fr
                 </a>
               </div>
               <div>
@@ -86,7 +96,7 @@ export default function ContactPage() {
         <div className="mt-12 bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10">
           <div className="text-center">
             <a 
-              href="/inventaire-ia/" 
+              href="/inventaire-ia" 
               className="inline-flex h-12 items-center justify-center rounded-2xl bg-[#6bcfcf] px-8 text-lg font-semibold text-[#04163a] shadow-lg hover:bg-[#6bcfcf]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6bcfcf]/50 transition duration-300"
             >
               Obtenez vos devis précis gratuitement
@@ -119,7 +129,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="text-center mt-6">
-            <a href="/faq/" className="text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors underline">
+            <a href="/faq" className="text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors underline">
               Voir toutes les questions fréquentes
             </a>
           </div>
