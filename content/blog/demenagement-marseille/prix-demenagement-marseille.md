@@ -108,6 +108,8 @@ Le niveau de service impacte directement le coût.
 
 #### Formule Économique (vous participez)
 
+Pour découvrir toutes les astuces d'économies, consultez notre [guide déménagement pas cher Marseille](/blog/demenagement-marseille/demenagement-marseille-pas-cher).
+
 **Vous faites** : Emballage, démontage basique meubles  
 **Déménageur fait** : Chargement, transport, déchargement, remontage basique
 
@@ -221,6 +223,8 @@ Au-delà du transport basique, plusieurs services additionnels majorent le prix.
 
 **Garde-meuble temporaire** (si décalage entre logements) : 50-150€/m³/mois
 - Exemple : Stocker 20 m³ pendant 2 mois = 2 000-6 000€
+
+Pour comparer toutes les options de garde-meuble, consultez notre [guide garde-meuble Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
 
 **Emballage fragiles spécifique** (œuvres d'art, piano, antiquités) : +100-500€
 

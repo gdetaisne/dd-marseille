@@ -51,7 +51,7 @@ Le terme "pas cher" recouvre plusieurs réalités. Identifiez celle qui correspo
 
 **Déménagement économique avec professionnel** : Vous participez activement (emballage, démontage basique) mais bénéficiez d'un camion, d'une équipe et d'une assurance. C'est le meilleur rapport qualité-prix.
 
-**Location camion + aide ponctuelle** : Vous louez un utilitaire (50-120€/jour) et engagez un ou deux manutentionnaires pour les charges lourdes (20-30€/h). Solution flexible pour petits budgets.
+**Location camion + aide ponctuelle** : Vous louez un utilitaire (50-120€/jour) et engagez un ou deux manutentionnaires pour les charges lourdes (20-30€/h). Solution flexible pour petits budgets. Pour tous les détails sur la location, consultez notre [guide location camion Marseille](/blog/demenagement-marseille/location-camion-demenagement-marseille).
 
 **Déménagement groupé** : Vos biens partagent un camion avec d'autres clients. Rare pour l'intra-Marseille, mais intéressant pour la longue distance (Marseille-Lyon par exemple). Économie de 30-40% contre une flexibilité réduite sur les dates.
 
@@ -78,6 +78,8 @@ Le terme "pas cher" recouvre plusieurs réalités. Identifiez celle qui correspo
 - T2 (25-35 m³) : 600-1000€
 - T3 (40-50 m³) : 1000-1500€
 - Supplément étage sans ascenseur : +50-80€/étage
+
+Pour une analyse complète des tarifs par formule, consultez notre [guide prix déménagement Marseille](/blog/demenagement-marseille/prix-demenagement-marseille).
 - Supplément accès difficile (Vieux-Port, Panier) : +80-150€
 
 **Idéal pour** : Étudiants de l'Université Aix-Marseille, jeunes actifs, personnes organisées disposant de temps avant le déménagement.
@@ -124,6 +126,8 @@ Si vous avez le permis B, de bons bras et une solide motivation, la location d'u
 - Fourgon 6-9 m³ : 50-80€/jour
 - Camionnette 10-14 m³ : 80-120€/jour
 - Camion 20 m³ : 120-180€/jour
+
+Pour tous les détails pratiques sur la location (comparatif loueurs, conseils conduite, options), découvrez notre [guide location camion Marseille](/blog/demenagement-marseille/location-camion-demenagement-marseille).
 
 **Points d'attention** :
 - Prévoir l'essence (non incluse généralement)

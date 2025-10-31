@@ -19,7 +19,7 @@ La location d'un espace de stockage répond à de nombreuses situations que peuv
 
 ### Les cas de figure les plus fréquents
 
-**Déménagement progressif** : Lorsque vous changez de logement, les dates ne coïncident pas toujours. Un garde meuble permet de stocker temporairement vos meubles et cartons entre deux appartements, évitant ainsi le stress d'un déménagement en une seule journée.
+**Déménagement progressif** : Lorsque vous changez de logement, les dates ne coïncident pas toujours. Un garde meuble permet de stocker temporairement vos meubles et cartons entre deux appartements, évitant ainsi le stress d'un déménagement en une seule journée. Pour optimiser l'ensemble de vos coûts déménagement + stockage, consultez notre [guide déménagement pas cher Marseille](/blog/demenagement-marseille/demenagement-marseille-pas-cher).
 
 **Travaux et rénovation** : Les travaux dans votre maison ou appartement nécessitent souvent de vider une ou plusieurs pièces. Plutôt que d'encombrer les autres espaces disponibles, la solution d'un box de stockage offre un lieu sûr et accessible pour protéger vos affaires de la poussière et des dégradations.
 
@@ -29,7 +29,7 @@ La location d'un espace de stockage répond à de nombreuses situations que peuv
 
 ### Les avantages du self-stockage
 
-Les centres de stockage modernes proposent une formule adaptée aux modes de vie contemporains : **accès 24/7** pour récupérer vos effets quand vous le souhaitez, **sécurité renforcée** avec alarme et surveillance vidéo, **contrats flexibles** sans engagement sur plusieurs années, et **diversité de tailles** pour s'adapter précisément à votre volume à stocker.
+Les centres de stockage modernes proposent une formule adaptée aux modes de vie contemporains : **accès 24/7** pour récupérer vos effets quand vous le souhaitez, **sécurité renforcée** avec alarme et surveillance vidéo, **contrats flexibles** sans engagement sur plusieurs années, et **diversité de tailles** pour s'adapter précisément à votre volume à stocker. Pour une estimation complète incluant garde-meuble et déménagement, consultez notre [guide prix déménagement Marseille](/blog/demenagement-marseille/prix-demenagement-marseille).
 
 ## Quels sont les types de garde meubles disponibles à Marseille ?
 
