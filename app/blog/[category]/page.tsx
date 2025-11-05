@@ -31,20 +31,18 @@ const categoryLabels: { [key: string]: string } = {
 const city = getCityDataFromUrl(env.SITE_URL);
 
 const categoryDescriptions: { [key: string]: string } = {
-    'etudiant': `Tous nos guides et conseils pour réussir votre déménagement étudiant à ${city.nameCapitalized} : astuces budget, aides financières, et solutions pratiques.`,
-  'entreprise': 'Guides complets pour organiser votre déménagement d\'entreprise à ${city.nameCapitalized} : planification, logistique, et conseils professionnels.`,
-  'piano': 'Conseils d\'experts pour déménager votre piano à ${city.nameCapitalized} en toute sécurité : tarifs, techniques, et précautions.`,
-  'international': 'Tout savoir sur le déménagement international depuis ${city.nameCapitalized} : formalités, transport, et organisation.`,
-  'longue-distance': 'Guides pratiques pour vos déménagements longue distance depuis ${city.nameCapitalized} : préparation, coûts, et astuces.`,
-  'pas-cher': 'Astuces et conseils pour déménager à petit prix à ${city.nameCapitalized} sans compromettre la qualité.`,
-  'urgent': 'Solutions et conseils pour organiser un déménagement urgent à ${city.nameCapitalized} dans les meilleures conditions.`,
-  'devis': 'Guides pour comprendre et obtenir les meilleurs devis de déménagement à ${city.nameCapitalized}.`,
-  'garde-meuble': 'Tout savoir sur les solutions de garde-meuble à ${city.nameCapitalized} : tarifs, options, et conseils.`,
-  'prix': 'Guides détaillés sur les prix de déménagement à ${city.nameCapitalized} pour tous types de projets.`,
-  'prix-piano': 'Informations complètes sur les tarifs de déménagement de piano à ${city.nameCapitalized}.'
-};
-
-const city = getCityDataFromUrl(env.SITE_URL);
+  'etudiant': `Tous nos guides et conseils pour réussir votre déménagement étudiant à ${city.nameCapitalized} : astuces budget, aides financières, et solutions pratiques.`,
+  'entreprise': `Guides complets pour organiser votre déménagement d'entreprise à ${city.nameCapitalized} : planification, logistique, et conseils professionnels.`,
+  'piano': `Conseils d'experts pour déménager votre piano à ${city.nameCapitalized} en toute sécurité : tarifs, techniques, et précautions.`,
+  'international': `Tout savoir sur le déménagement international depuis ${city.nameCapitalized} : formalités, transport, et organisation.`,
+  'longue-distance': `Guides pratiques pour vos déménagements longue distance depuis ${city.nameCapitalized} : préparation, coûts, et astuces.`,
+  'pas-cher': `Astuces et conseils pour déménager à petit prix à ${city.nameCapitalized} sans compromettre la qualité.`,
+  'urgent': `Solutions et conseils pour organiser un déménagement urgent à ${city.nameCapitalized} dans les meilleures conditions.`,
+  'devis': `Guides pour comprendre et obtenir les meilleurs devis de déménagement à ${city.nameCapitalized}.`,
+  'garde-meuble': `Tout savoir sur les solutions de garde-meuble à ${city.nameCapitalized} : tarifs, options, et conseils.`,
+  'prix': `Guides détaillés sur les prix de déménagement à ${city.nameCapitalized} pour tous types de projets.`,
+  'prix-piano': `Informations complètes sur les tarifs de déménagement de piano à ${city.nameCapitalized}.`
+};;
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const categoryLabel = categoryLabels[params.category] || params.category;
