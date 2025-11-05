@@ -128,15 +128,13 @@ const nextConfig = {
       { source: '/blog/urgent', destination: '/blog/', permanent: true },
       { source: '/blog/devis', destination: '/blog/', permanent: true },
       { source: '/blog/longue-distance', destination: '/blog/', permanent: true },
-
-      // WILDCARDS CATCH-ALL (TASK-LEADGEN-02 - Fix 404 restructuration blog)
-      { source: '/blog/garde-meuble/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
-      { source: '/blog/pas-cher/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
-      { source: '/blog/international/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
-      { source: '/blog/piano/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
-      { source: '/blog/location-camion-marseille/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
-      { source: '/blog/petit-demenagement-marseille/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
-      { source: '/blog/demenageur/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
+      // WILDCARDS CATCH-ALL (TASK-LEADGEN-02 - Fix 404 restructuration blog) - CORRIGÉ
+      { source: '/blog/garde-meuble/:slug*', destination: '/blog/garde-meuble-marseille/:slug*', permanent: true },
+      { source: '/blog/pas-cher/:slug*', destination: '/blog/demenagement-pas-cher-marseille/:slug*', permanent: true },
+      { source: '/blog/international/:slug*', destination: '/blog/demenagement-international-marseille/:slug*', permanent: true },
+      { source: '/blog/piano/:slug*', destination: '/blog/demenagement-piano-marseille/:slug*', permanent: true },
+      { source: '/blog/demenageur/:slug*', destination: '/blog/demenageur-marseille/:slug*', permanent: true },
+      { source: '/blog/aide/:slug*', destination: '/blog/aide-demenagement-marseille/:slug*', permanent: true },
     ];
   }
 };
