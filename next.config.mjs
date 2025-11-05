@@ -98,7 +98,6 @@ const nextConfig = {
       
       // Catégories vides
       { source: '/blog/international', destination: '/blog/', permanent: true },
-      { source: '/blog/longue-distance', destination: '/blog/', permanent: true },
 
       // TOP PRIORITÉ (URLs 404 → piliers Marseille)
       { source: '/blog/demenagement-marseille/petit-demenagement', destination: '/blog/demenagement-marseille/', permanent: true },
@@ -110,7 +109,6 @@ const nextConfig = {
       { source: '/blog/demenagement-marseille/autorisation-stationnement-demenagement', destination: '/blog/demenagement-marseille/', permanent: true },
       { source: '/blog/prix-demenagement-montpellier', destination: '/blog/', permanent: true },
       { source: '/blog/garde-meuble/garde-meuble-etudiant-ete', destination: '/blog/', permanent: true },
-      { source: '/blog/devis', destination: '/blog/', permanent: true },
       
       // Pages légales trailing slash
       { source: '/mentions-legales/', destination: '/mentions-legales/', permanent: true },
@@ -130,6 +128,15 @@ const nextConfig = {
       { source: '/blog/urgent', destination: '/blog/', permanent: true },
       { source: '/blog/devis', destination: '/blog/', permanent: true },
       { source: '/blog/longue-distance', destination: '/blog/', permanent: true },
+
+      // WILDCARDS CATCH-ALL (TASK-LEADGEN-02 - Fix 404 restructuration blog)
+      { source: '/blog/garde-meuble/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
+      { source: '/blog/pas-cher/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
+      { source: '/blog/international/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
+      { source: '/blog/piano/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
+      { source: '/blog/location-camion-marseille/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
+      { source: '/blog/petit-demenagement-marseille/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
+      { source: '/blog/demenageur/:slug*', destination: '/blog/satellites/:slug*', permanent: true },
     ];
   }
 };
