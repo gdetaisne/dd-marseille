@@ -11,13 +11,13 @@ author: "Équipe Moverz Marseille"
 
 La durée de stockage entre deux logements varie de 1,5 à 2 mois en moyenne à Marseille, dictée par les délais de préavis des baux et les retards fréquents de livraison des logements neufs (données acteurs locaux, octobre 2025). Cette période de transition nécessite un box temporaire pour éviter un double déménagement coûteux ou la location d'un logement provisoire onéreux.
 
-30% des 44 000 déménagements annuels marseillais (INSEE, 2024) utilisent un stockage temporaire, soit environ 13 200 situations par an. Une famille en T2 dépense en moyenne 368€ pour stocker 2 mois (10m² × 184€/mois), un investissement qui simplifie considérablement la transition et permet d'emménager progressivement dans le nouveau logement. Ces éléments s'inscrivent dans le contexte plus large de notre [stockage sécurisé à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
+30% des 44 000 déménagements annuels marseillais (INSEE, 2024) utilisent un stockage temporaire, soit environ 13 200 situations par an. Une famille en T2 dépense en moyenne 368€ pour stocker 2 mois (10m² × 184€/mois), un investissement qui simplifie considérablement la transition et permet d'emménager progressivement dans le nouveau logement. Ces éléments s'inscrivent dans le contexte plus large de notre [stockage sécurisé à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
 
 La famille Dubois témoigne : "Prévu 1 mois stockage, finalement 6 semaines à cause retard livraison appartement neuf. Aucun souci avec Homebox, juste facturé 15j supplémentaires (57€)" (avis Homebox Saint-Just 13e, septembre 2025). Cette flexibilité contractuelle marseillaise protège contre les imprévus fréquents en déménagement.
 
 ## Durées Types Selon Votre Situation
 
-Pour comprendre tous les aspects de ce sujet, consultez notre [guide complet du garde-meuble à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
+Pour comprendre tous les aspects de ce sujet, consultez notre [guide complet du garde-meuble à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
 
 Le stockage entre deux logements dure typiquement 1 à 2 mois quand les dates s'enchaînent normalement. Votre bail actuel se termine le 31 mars, le nouveau commence le 1er mai : vous louez un box d'avril à mai (2 mois pleins). Un T2 nécessite 10m² à 184€/mois, coût total 368€ (calcul octobre 2025). Cette formule évite un double déménagement (vider l'ancien, stocker provisoirement, charger le nouveau) qui coûterait 850-950€ × 2 = 1 700-1 900€ vs 850€ + 368€ stockage = 1 218€.
 
@@ -76,13 +76,13 @@ Prévoyez systématiquement +15 jours de marge sur votre durée estimée pour ab
 
 La durée moyenne de stockage pendant un déménagement à Marseille s'établit à 1,5-2 mois pour une transition entre logements, 2-4 mois pour des travaux de rénovation, et 3-6 mois lors d'une vente immobilière avec délais (données acteurs locaux, octobre 2025). Un T2 stocké 2 mois coûte 368€ (10m² × 184€), un T3 pendant 3 mois 747€ (15m² × 249€), budgets justifiés face aux alternatives de logements provisoires à 2 250-3 750€ sur les mêmes périodes.
 
-La flexibilité totale des contrats marseillais (reconduction mensuelle, ajustement sans pénalité, préavis 15-30j) sécurise contre les imprévus fréquents. 30% des 44 000 déménagements annuels marseillais utilisent un stockage temporaire, confirmant la pertinence de cette solution. Prévoyez +15 jours de marge sur votre estimation initiale et consultez notre [guide complet des garde-meubles à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide) pour choisir le centre adapté à votre quartier.
+La flexibilité totale des contrats marseillais (reconduction mensuelle, ajustement sans pénalité, préavis 15-30j) sécurise contre les imprévus fréquents. 30% des 44 000 déménagements annuels marseillais utilisent un stockage temporaire, confirmant la pertinence de cette solution. Prévoyez +15 jours de marge sur votre estimation initiale et consultez notre [guide complet des garde-meubles à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet) pour choisir le centre adapté à votre quartier.
 
 ---
 
 ## Sources
 
-Pour approfondir ce sujet et découvrir tous nos conseils, consultez notre [solutions de garde-meuble marseillais](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
+Pour approfondir ce sujet et découvrir tous nos conseils, consultez notre [solutions de garde-meuble marseillais](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
 
 1. INSEE Marseille 2024 - 44 000 déménagements/an
 2. Fiche locale - Durées moyennes stockage (13 octobre 2025)
