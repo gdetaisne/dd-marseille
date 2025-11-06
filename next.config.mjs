@@ -128,7 +128,145 @@ const nextConfig = {
       { source: '/blog/urgent', destination: '/blog/', permanent: true },
       { source: '/blog/devis', destination: '/blog/', permanent: true },
       { source: '/blog/longue-distance', destination: '/blog/', permanent: true },
-      // WILDCARDS CATCH-ALL (TASK-LEADGEN-02 - COMPLETS)
+      
+      // 🔴 TASK-054: Cross-city URLs 404 → Redirections spécifiques AVANT wildcards (80% des 404)
+      // IMPORTANT : Ces redirections DOIVENT être AVANT les wildcards pour être matchées correctement
+      // Toutes les URLs d'autres villes sur le domaine marseille.fr → redirection vers équivalent marseille OU homepage
+      { source: '/blog/demenagement-nice/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-lille/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-montpellier/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-rouen/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-strasbourg/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-toulouse/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-rennes/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-nantes/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-bordeaux/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-lyon/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      
+      // Autres catégories cross-city
+      { source: '/blog/petit-demenagement-nice/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/petit-demenagement-lille/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/petit-demenagement-montpellier/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/petit-demenagement-nantes/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/petit-demenagement-rennes/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      
+      { source: '/blog/garde-meuble-nice/:slug*', destination: '/blog/garde-meuble-marseille/', permanent: true },
+      { source: '/blog/garde-meuble-lille/:slug*', destination: '/blog/garde-meuble-marseille/', permanent: true },
+      { source: '/blog/garde-meuble-montpellier/:slug*', destination: '/blog/garde-meuble-marseille/', permanent: true },
+      { source: '/blog/garde-meuble-nantes/:slug*', destination: '/blog/garde-meuble-marseille/', permanent: true },
+      { source: '/blog/garde-meuble-rennes/:slug*', destination: '/blog/garde-meuble-marseille/', permanent: true },
+      { source: '/blog/garde-meuble-lyon/:slug*', destination: '/blog/garde-meuble-marseille/', permanent: true },
+      
+      { source: '/blog/prix-demenagement-nice/:slug*', destination: '/blog/prix-demenagement-marseille/', permanent: true },
+      { source: '/blog/prix-demenagement-lille/:slug*', destination: '/blog/prix-demenagement-marseille/', permanent: true },
+      { source: '/blog/prix-demenagement-montpellier/:slug*', destination: '/blog/prix-demenagement-marseille/', permanent: true },
+      { source: '/blog/prix-demenagement-nantes/:slug*', destination: '/blog/prix-demenagement-marseille/', permanent: true },
+      { source: '/blog/prix-demenagement-bordeaux/:slug*', destination: '/blog/prix-demenagement-marseille/', permanent: true },
+      
+      { source: '/blog/demenagement-piano-nice/:slug*', destination: '/blog/demenagement-piano-marseille/', permanent: true },
+      { source: '/blog/demenagement-piano-lille/:slug*', destination: '/blog/demenagement-piano-marseille/', permanent: true },
+      { source: '/blog/demenagement-piano-montpellier/:slug*', destination: '/blog/demenagement-piano-marseille/', permanent: true },
+      { source: '/blog/demenagement-piano-nantes/:slug*', destination: '/blog/demenagement-piano-marseille/', permanent: true },
+      { source: '/blog/demenagement-piano-rennes/:slug*', destination: '/blog/demenagement-piano-marseille/', permanent: true },
+      { source: '/blog/demenagement-piano-bordeaux/:slug*', destination: '/blog/demenagement-piano-marseille/', permanent: true },
+      { source: '/blog/demenagement-piano-lyon/:slug*', destination: '/blog/demenagement-piano-marseille/', permanent: true },
+      
+      { source: '/blog/demenagement-entreprise-nice/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-entreprise-lille/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-entreprise-lyon/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-entreprise-montpellier/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-entreprise-rennes/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-entreprise-bordeaux/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      
+      { source: '/blog/demenagement-international-nice/:slug*', destination: '/blog/demenagement-international-marseille/', permanent: true },
+      { source: '/blog/demenagement-international-lille/:slug*', destination: '/blog/demenagement-international-marseille/', permanent: true },
+      { source: '/blog/demenagement-international-montpellier/:slug*', destination: '/blog/demenagement-international-marseille/', permanent: true },
+      { source: '/blog/demenagement-international-nantes/:slug*', destination: '/blog/demenagement-international-marseille/', permanent: true },
+      { source: '/blog/demenagement-international-rennes/:slug*', destination: '/blog/demenagement-international-marseille/', permanent: true },
+      { source: '/blog/demenagement-international-bordeaux/:slug*', destination: '/blog/demenagement-international-marseille/', permanent: true },
+      { source: '/blog/demenagement-international-lyon/:slug*', destination: '/blog/demenagement-international-marseille/', permanent: true },
+      
+      { source: '/blog/demenagement-pas-cher-nice/:slug*', destination: '/blog/demenagement-pas-cher-marseille/', permanent: true },
+      { source: '/blog/demenagement-pas-cher-lille/:slug*', destination: '/blog/demenagement-pas-cher-marseille/', permanent: true },
+      { source: '/blog/demenagement-pas-cher-montpellier/:slug*', destination: '/blog/demenagement-pas-cher-marseille/', permanent: true },
+      { source: '/blog/demenagement-pas-cher-nantes/:slug*', destination: '/blog/demenagement-pas-cher-marseille/', permanent: true },
+      { source: '/blog/demenagement-pas-cher-rennes/:slug*', destination: '/blog/demenagement-pas-cher-marseille/', permanent: true },
+      { source: '/blog/demenagement-pas-cher-bordeaux/:slug*', destination: '/blog/demenagement-pas-cher-marseille/', permanent: true },
+      
+      { source: '/blog/demenageur-nice/:slug*', destination: '/blog/demenageur-marseille/', permanent: true },
+      { source: '/blog/demenageur-lille/:slug*', destination: '/blog/demenageur-marseille/', permanent: true },
+      { source: '/blog/demenageur-montpellier/:slug*', destination: '/blog/demenageur-marseille/', permanent: true },
+      { source: '/blog/demenageur-rennes/:slug*', destination: '/blog/demenageur-marseille/', permanent: true },
+      { source: '/blog/demenageur-rennes-prix/:slug*', destination: '/blog/demenageur-marseille/', permanent: true },
+      
+      { source: '/blog/location-camion-nice/:slug*', destination: '/blog/satellites/location-camion-demenagement-marseille/', permanent: true },
+      { source: '/blog/location-camion-lille/:slug*', destination: '/blog/satellites/location-camion-demenagement-marseille/', permanent: true },
+      { source: '/blog/location-camion-rennes/:slug*', destination: '/blog/satellites/location-camion-demenagement-marseille/', permanent: true },
+      
+      { source: '/blog/aide-demenagement-nice/:slug*', destination: '/blog/aide-demenagement-marseille/', permanent: true },
+      { source: '/blog/aide-demenagement-lille/:slug*', destination: '/blog/aide-demenagement-marseille/', permanent: true },
+      { source: '/blog/aide-demenagement-montpellier/:slug*', destination: '/blog/aide-demenagement-marseille/', permanent: true },
+      { source: '/blog/aide-demenagement-nantes/:slug*', destination: '/blog/aide-demenagement-marseille/', permanent: true },
+      { source: '/blog/aide-demenagement-rennes/:slug*', destination: '/blog/aide-demenagement-marseille/', permanent: true },
+      { source: '/blog/aide-demenagement-lyon/:slug*', destination: '/blog/aide-demenagement-marseille/', permanent: true },
+      
+      // Catégories obsolètes/spécifiques autres villes
+      { source: '/blog/demenagement-longue-distance-bordeaux/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-urgent-bordeaux/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/devis-demenagement-bordeaux/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/demenagement-etudiant-bordeaux/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      
+      // URL malformée $slug
+      { source: '/blog/demenagement-marseille/$slug', destination: '/blog/demenagement-marseille/', permanent: true },
+      
+      // URL bizarre /marseille/Marseille/
+      { source: '/marseille/Marseille/', destination: '/quartiers-marseille/', permanent: true },
+      
+      // Catégories obsolètes avec accents ou formats bizarres
+      { source: '/blog/deménagement-voiture/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/demenagement-escalier/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-tram/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-bus/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-vélo/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-moto/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-télésiège/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-remonte-pente/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-funiculaire/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-métro/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-train/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-avion/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-bateau/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-hélicoptère/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-express/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-express-24h/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-express-nuit/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-express-soir/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-express-weekend/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-express-critique/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-express-urgent/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-immédiat/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-immédiat-24h/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-urgence/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-urgent/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-urgent-24h/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-instantané/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-instantané-24h/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-éclair/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-éclair-24h/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-flash/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-rapide/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-etudiant/:slug*', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/deménagement-weekend/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/deménagement-local/:slug*', destination: '/blog/', permanent: true },
+      
+      // Pages génériques obsolètes
+      { source: '/blog/longue-distance/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/devis/:slug*', destination: '/blog/', permanent: true },
+      { source: '/blog/prix-deménagement/:slug*', destination: '/blog/prix-demenagement-marseille/', permanent: true },
+      { source: '/blog/contact-deménagement/:slug*', destination: '/contact/', permanent: true },
+      
+      // WILDCARDS CATCH-ALL (TASK-LEADGEN-02 - Guillaume) - APRÈS redirections spécifiques
+      // ⚠️ Ces wildcards doivent être EN DERNIER pour ne pas capturer les URLs cross-city ci-dessus
       { source: '/blog/garde-meuble/:slug*', destination: '/blog/garde-meuble-marseille/:slug*', permanent: true },
       { source: '/blog/pas-cher/:slug*', destination: '/blog/demenagement-pas-cher-marseille/:slug*', permanent: true },
       { source: '/blog/international/:slug*', destination: '/blog/demenagement-international-marseille/:slug*', permanent: true },
