@@ -135,7 +135,7 @@ const nextConfig = {
       // IMPORTANT : Ces redirections DOIVENT être AVANT les wildcards pour être matchées en priorité
       // ========================================
       // Cross-contamination : Corriger liens vers autres villes → Marseille
-      { source: '/blog/demenagement-lille/demenageur-lille-expert', destination: '/blog/demenagement-marseille/demenageur-marseille-expert/', permanent: true },
+      { source: '/blog/demenagement-lille/demenageur-lille-expert', destination: '/blog/demenagement-marseille/', permanent: true },
       { source: '/blog/prix-demenagement-montpellier/prix-demenagement-longue-distance-montpellier-paris', destination: '/blog/demenagement-marseille/prix-demenagement-longue-distance/', permanent: true },
       { source: '/blog/demenagement-petit-volume-lyon/transport-cartons-uniquement-lyon', destination: '/blog/demenagement-marseille/transport-cartons-uniquement/', permanent: true },
       { source: '/blog/garde-meuble-rouen/duree-minimum-garde-meuble-rouen', destination: '/blog/garde-meuble-marseille/duree-minimum-garde-meuble-marseille/', permanent: true },
@@ -144,23 +144,24 @@ const nextConfig = {
       { source: '/blog/demenagement-strasbourg/demenageur-monte-meuble-strasbourg', destination: '/blog/demenagement-marseille/demenageur-monte-meuble/', permanent: true },
       { source: '/blog/garde-meuble-montpellier/garde-meuble-par-quartier-montpellier', destination: '/blog/garde-meuble-marseille/garde-meuble-par-quartier/', permanent: true },
       { source: '/blog/demenagement-pas-cher-nice/cartons-gratuits-nice-ou-trouver', destination: '/blog/demenagement-marseille/cartons-gratuits-demenagement-ou-trouver/', permanent: true },
-      { source: '/blog/prix-demenagement-nice', destination: '/blog/prix-demenagement-marseille/', permanent: true },
+      { source: '/blog/prix-demenagement-nice', destination: '/blog/demenagement-marseille/', permanent: true },
       { source: '/blog/location-camion-demenagement-montpellier/quelle-taille-camion-louer-montpellier-demenagement', destination: '/blog/location-camion-marseille/quelle-taille-camion-louer/', permanent: true },
       { source: '/services/demenagement-standard-toulouse', destination: '/services/', permanent: true },
       { source: '/blog/demenagement-longue-distance/demenagement-depuis-autre-region-vers-nice', destination: '/blog/demenagement-longue-distance-marseille/demenagement-depuis-autre-region/', permanent: true },
       
       // Autres articles Marseille (trailing slash)
-      { source: '/blog/demenagement-marseille/demenager-soi-meme-budget-diy', destination: '/blog/demenagement-marseille/demenager-soi-meme-budget-diy/', permanent: true },
+      // ⚠️ Articles satellites (catégorie conseils) → Redirection temporaire vers page catégorie (problème routage)
+      { source: '/blog/demenagement-marseille/demenager-soi-meme-budget-diy', destination: '/blog/demenagement-marseille/', permanent: true },
       { source: '/blog/demenagement-marseille/ou-louer-camion-demenagement-agences', destination: '/blog/demenagement-marseille/ou-louer-camion-demenagement-agences/', permanent: true },
       { source: '/blog/demenagement-marseille/prix-demenagement-longue-distance', destination: '/blog/demenagement-marseille/prix-demenagement-longue-distance/', permanent: true },
-      { source: '/blog/demenagement-marseille/meilleur-demenageur-comparatif-2025', destination: '/blog/demenagement-marseille/meilleur-demenageur-comparatif-2025/', permanent: true },
-      { source: '/blog/demenagement-marseille/pourboire-demenageurs-usages', destination: '/blog/demenagement-marseille/pourboire-demenageurs-usages/', permanent: true },
-      { source: '/blog/demenagement-marseille/comparatif-prix-demenageurs-moins-cher', destination: '/blog/demenagement-marseille/comparatif-prix-demenageurs-moins-cher/', permanent: true },
+      { source: '/blog/demenagement-marseille/meilleur-demenageur-comparatif-2025', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-marseille/pourboire-demenageurs-usages', destination: '/blog/demenagement-marseille/', permanent: true },
+      { source: '/blog/demenagement-marseille/comparatif-prix-demenageurs-moins-cher', destination: '/blog/demenagement-marseille/', permanent: true },
       { source: '/blog/demenagement-marseille/aide-au-demenagement-guide', destination: '/blog/demenagement-marseille/aide-au-demenagement/', permanent: true },
       { source: '/blog/demenagement-marseille/aide-demenagement-particulier-trouver', destination: '/blog/demenagement-marseille/aide-demenagement-particulier-trouver/', permanent: true },
-      { source: '/blog/demenagement-marseille/location-camion-aide-alternative-pas-chere', destination: '/blog/demenagement-marseille/location-camion-aide-alternative-pas-chere/', permanent: true },
+      { source: '/blog/demenagement-marseille/location-camion-aide-alternative-pas-chere', destination: '/blog/demenagement-marseille/', permanent: true },
       { source: '/blog/demenagement-marseille/location-utilitaire-20m3-tarifs', destination: '/blog/demenagement-marseille/location-utilitaire-20m3-tarifs/', permanent: true },
-      { source: '/blog/demenagement-marseille/leclerc-location-meilleurs-prix', destination: '/blog/demenagement-marseille/leclerc-location-meilleurs-prix/', permanent: true },
+      { source: '/blog/demenagement-marseille/leclerc-location-meilleurs-prix', destination: '/blog/demenagement-marseille/', permanent: true },
       { source: '/blog/demenagement-marseille/comment-choisir-demenageur', destination: '/blog/demenagement-marseille/comment-choisir-demenageur/', permanent: true },
       { source: '/blog/demenagement-marseille/location-camion-gare-saint-charles', destination: '/blog/demenagement-marseille/location-camion-gare-saint-charles/', permanent: true },
       { source: '/blog/demenagement-marseille/aide-au-demenagement', destination: '/blog/demenagement-marseille/aide-au-demenagement/', permanent: true },
@@ -171,11 +172,11 @@ const nextConfig = {
       { source: '/blog/demenagement-marseille/prix-demenageur-tarifs-2025', destination: '/blog/demenagement-marseille/prix-demenageur-tarifs-2025/', permanent: true },
       { source: '/blog/demenagement-marseille/demenagement-pas-cher', destination: '/blog/demenagement-marseille/demenagement-pas-cher/', permanent: true },
       { source: '/blog/demenagement-marseille/cartons-gratuits-demenagement-ou-trouver', destination: '/blog/demenagement-marseille/cartons-gratuits-demenagement-ou-trouver/', permanent: true },
-      { source: '/blog/demenagement-marseille/demenageur', destination: '/blog/demenagement-marseille/demenageur-marseille/', permanent: true },
+      { source: '/blog/demenagement-marseille/demenageur', destination: '/blog/demenagement-marseille/demenageur/', permanent: true },
       { source: '/blog/demenagement-marseille/surcout-demenagement-centre-combien', destination: '/blog/demenagement-marseille/surcout-demenagement-centre-combien/', permanent: true },
       
       // Garde-meuble générique
-      { source: '/blog/garde-meuble/guide-complet', destination: '/blog/garde-meuble-marseille/guide-complet/', permanent: true },
+      { source: '/blog/garde-meuble/guide-complet', destination: '/blog/garde-meuble-marseille/garde-meuble-guide-complet/', permanent: true },
       { source: '/blog/garde-meuble/combien-coute-garde-meuble', destination: '/blog/garde-meuble-marseille/combien-coute-garde-meuble/', permanent: true },
       { source: '/blog/garde-meuble/nord-sud-comparaison', destination: '/blog/garde-meuble-marseille/nord-sud-comparaison/', permanent: true },
       
