@@ -366,7 +366,7 @@ export default function ServicesPage() {
                 <a href="/blog/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors">
                   → Combien de cartons prévoir ?
                 </a>
-                <a href="/blog/prix/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors">
+                <a href="/blog/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors">
                   → Prix déménagement 2025 : tout comprendre
                 </a>
                 <a href="/blog/" className="block text-white/70 hover:text-white text-sm transition-colors mt-6">
