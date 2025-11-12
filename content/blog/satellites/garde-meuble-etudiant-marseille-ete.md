@@ -11,13 +11,13 @@ author: "Équipe Moverz Marseille"
 
 Les 75 000 étudiants marseillais répartis sur les campus de La Plaine (5e), La Timone (5e), Castellane (6e) et Luminy (9e) font face chaque été à la même problématique : stocker leurs affaires pendant 3 à 4 mois sans payer de loyer inutile. Un box de 3-5m² coûte 294-460€ au total pour l'été (calcul 3-4 mois, octobre 2025), évitant de sous-louer un studio à 550-750€ par mois ou de transporter meubles et cartons chez les parents.
 
-La période critique s'étend de juin à septembre, coïncidant avec la fin des baux étudiants et la rentrée universitaire. La demande de petites tailles explose de +20-30% sur ces mois (données centres Marseille, octobre 2025), saturant parfois les disponibilités fin août quand 18 000 étudiants déménagent simultanément. Réserver dès mai garantit votre box et évite les mauvaises surprises. Ces éléments s'inscrivent dans le contexte plus large de notre [stockage sécurisé à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
+La période critique s'étend de juin à septembre, coïncidant avec la fin des baux étudiants et la rentrée universitaire. La demande de petites tailles explose de +20-30% sur ces mois (données centres Marseille, octobre 2025), saturant parfois les disponibilités fin août quand 18 000 étudiants déménagent simultanément. Réserver dès mai garantit votre box et évite les mauvaises surprises. Ces éléments s'inscrivent dans le contexte plus large de notre [stockage sécurisé à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
 
 Lucas P., étudiant à Aix-Marseille Université, témoigne : "Box 5m² chez Homebox 4 mois été, 115€/mois, nickel. Accès 24/7 vraiment pratique pour ranger progressivement entre 2 colocations" (avis Google Homebox Capitaine Gèze, juillet 2025). Son budget de 460€ pour l'été lui a permis de voyager léger et de retrouver ses affaires intactes en septembre.
 
 ## Besoins Spécifiques des Étudiants Marseillais
 
-Pour comprendre tous les aspects de ce sujet, consultez notre [guide complet du garde-meuble à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
+Pour comprendre tous les aspects de ce sujet, consultez notre [guide complet du garde-meuble à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
 
 Une chambre étudiante standard génère 15 à 25m³ de volume à stocker : lit simple (0,8m³), bureau et chaise (0,6m³), étagères (0,4m³), 20-30 cartons de vêtements et livres (1,5-2m³), et quelques objets personnels (0,7m³). Total : environ 4-5m³, correspondant à un box de 3m² (72€/mois) ou 5m² (107€/mois) selon l'optimisation du rangement.
 
@@ -72,7 +72,7 @@ Négociez un tarif réduit en mentionnant votre statut étudiant. Une Pièce en 
 
 Les étudiants marseillais disposent de solutions de stockage flexibles adaptées à leurs budgets serrés : boxes de 3-5m² facturés 72-107€ par mois chez Box & Cie (10e), Une Pièce en Plus (Arnavaux 14e, La Valentine 11e) et Homebox (Capitaine Gèze 15e, Saint-Just 13e). Pour 4 mois de stockage estival, prévoyez un budget de 294-460€ selon l'acteur et les services choisis (comparatif octobre 2025).
 
-Réservez dès mai pour éviter la saturation d'août quand 75 000 étudiants rentrent à Marseille. Désencombrez avant de stocker pour économiser 1-2m² (35-107€/mois). Les contrats d'1 mois renouvelables sans engagement s'adaptent parfaitement aux durées variables de 2 à 5 mois. Pour découvrir toutes les solutions de stockage marseillaises, consultez notre [guide complet des garde-meubles à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
+Réservez dès mai pour éviter la saturation d'août quand 75 000 étudiants rentrent à Marseille. Désencombrez avant de stocker pour économiser 1-2m² (35-107€/mois). Les contrats d'1 mois renouvelables sans engagement s'adaptent parfaitement aux durées variables de 2 à 5 mois. Pour découvrir toutes les solutions de stockage marseillaises, consultez notre [guide complet des garde-meubles à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
 
 ---
 
@@ -106,7 +106,7 @@ Contractuellement, les garde-meubles marseillais interdisent la sous-location et
 
 ## Sources
 
-Pour approfondir ce sujet et découvrir tous nos conseils, consultez notre [solutions de garde-meuble marseillais](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
+Pour approfondir ce sujet et découvrir tous nos conseils, consultez notre [solutions de garde-meuble marseillais](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
 
 1. Aix-Marseille Université - 75 000 étudiants (2024-2025)
 2. Centres stockage Marseille - Tarifs étudiants (octobre 2025)

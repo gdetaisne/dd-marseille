@@ -53,7 +53,7 @@ Les travaux de rénovation nécessitent des stockages plus longs de 2 à 6 mois 
 
 La durée minimum de location d'un garde-meuble à Marseille varie de 1 mois en self-stockage (Homebox, Une Pièce en Plus, Box & Cie) à 3 mois en garde-meuble traditionnel (Garde-Meuble Phocéen, Central Déménagement). Le préavis de résiliation oscille entre 15 et 30 jours selon l'acteur, avec application de la règle du mois entamé = mois dû. La durée moyenne de stockage marseillaise s'établit à 4,5 mois, tirée par les transitions entre logements (1,5-2 mois), les travaux (3-6 mois) et le stockage étudiant estival (3-4 mois).
 
-La flexibilité des contrats sans engagement longue durée représente l'avantage majeur du self-stockage marseillais : 100% des centres fonctionnent en reconduction tacite mensuelle, vous permettant d'ajuster votre durée à vos besoins réels sans pénalité. Pour des conseils personnalisés selon votre situation, consultez notre [guide complet des garde-meubles à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide-complet).
+La flexibilité des contrats sans engagement longue durée représente l'avantage majeur du self-stockage marseillais : 100% des centres fonctionnent en reconduction tacite mensuelle, vous permettant d'ajuster votre durée à vos besoins réels sans pénalité. Pour des conseils personnalisés selon votre situation, consultez notre [guide complet des garde-meubles à Marseille](/blog/garde-meuble-marseille/garde-meuble-marseille-guide).
 
 ---
 
