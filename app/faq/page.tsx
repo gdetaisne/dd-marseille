@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from "react";
 import { getCityDataFromUrl } from "@/lib/cityData";
@@ -11,132 +11,140 @@ type QA = { q: string; a: string[]; category: string };
 const city = getCityDataFromUrl(env.SITE_URL);
 
 const faqs: QA[] = [
-  // Constitution du dossier (photos & inventaire)
+  // Utilisation du comparateur
   {
-    q: "Combien de photos faut-il?",
+    q: "Comment fonctionne le comparateur de devis ?",
     a: [
-      "Tout ce qui doit être déménagé doit être pris en photo: 3 à 10 photos par pièce. Pensez aux plafonniers et lampes. Vous pouvez photographier un même objet sous plusieurs angles : il ne sera compté qu'une seule fois dans l'inventaire."
+      "Vous créez un dossier unique avec les détails de votre déménagement (volume estimé, adresses, contraintes d'accès, prestations souhaitées). Nous le transmettons à 5+ déménageurs certifiés qui vous envoient des devis sur la même base. Vous comparez et choisissez en toute transparence."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Utilisation du comparateur",
   },
   {
-    q: "Comment estimer le volume en m³ à déménager?",
+    q: "Est-ce vraiment gratuit ?",
     a: [
-      "Nos outils calculent automatiquement une première estimation à partir de vos photos (fiabilité =90%). Vous pouvez la corriger avant envoi aux partenaires."
+      "Oui, 100% gratuit. Vous ne payez rien pour utiliser le comparateur, recevoir les devis ou être accompagné. Nous sommes rémunérés par les déménageurs partenaires uniquement si vous choisissez l'un d'eux."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Utilisation du comparateur",
   },
   {
-    q: "L'estimation en m³ est-elle fiable?",
+    q: "Suis-je engagé après avoir reçu les devis ?",
     a: [
-      "La première estimation liste tout votre mobilier et elle est très fiable (90%). Vous pouvez ensuite apporter des modifications. Enfin, le dossier est revu par nos partenaires: l'estimation devient alors très précise."
+      "Non, aucun engagement. Vous êtes libre de choisir un devis, d'en refuser tous, ou de ne pas donner suite. Aucune obligation, aucun frais caché."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Utilisation du comparateur",
   },
   {
-    q: "Objets fragiles (art, instruments): comment sont-ils gérés ?",
+    q: "Quelles informations dois-je fournir ?",
     a: [
-      "Nous identifions les objets fragiles et adaptons le cubage nécessaire en conséquence."
+      "Les informations essentielles : type de logement (studio, T2, maison...), adresses de départ et d'arrivée, date souhaitée, contraintes d'accès (étages, ascenseur, stationnement), et prestations souhaitées (emballage, démontage, garde-meuble...)."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Utilisation du comparateur",
   },
   {
-    q: "Pourquoi ne me demandez-vous pas mon adresse au dépôt du dossier ?",
+    q: "Puis-je estimer mon volume sans photos ?",
     a: [
-      "L'adresse exacte n'impacte pas le coût de la prestation à ce stade. Nous n'en avons donc pas besoin pour obtenir des devis."
+      "Oui. Vous pouvez fournir une estimation rapide basée sur votre type de logement et le nombre de pièces. Les photos sont optionnelles et permettent d'affiner l'estimation, mais ne sont pas obligatoires."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Utilisation du comparateur",
   },
   {
-    q: "Puis-je utiliser une vidéo?",
+    q: "Pourquoi ne me demandez-vous pas mon adresse complète au départ ?",
     a: [
-      "Nous avons constaté des résultats moins fiables avec les vidéos. Nous recommandons les photos pour une estimation optimale."
+      "Pour protéger vos données et éviter les appels intempestifs. Nous anonymisons votre dossier (ville/quartier uniquement) tant que vous n'avez pas choisi un déménageur. L'adresse exacte est partagée uniquement au moment où vous validez une proposition."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Utilisation du comparateur",
+  },
+  // Devis & comparaison
+  {
+    q: "Combien de devis vais-je recevoir ?",
+    a: [
+      "Vous recevez minimum 5 devis de déménageurs certifiés. Dans 95% des cas, vous en recevez entre 5 et 8. Tous sont basés sur le même dossier, ce qui garantit une comparaison équitable."
+    ],
+    category: "Devis & comparaison",
   },
   {
-    q: "Puis-je modifier l'inventaire après envoi?",
+    q: "Quand vais-je recevoir les devis ?",
     a: [
-      "Après validation et envoi aux partenaires, il est préférable de ne pas modifier l'inventaire pour ne pas biaiser la comparaison. De petites retouches n'ont généralement pas d'impact, mais en cas de changement significatif vous pouvez annuler votre dossier et en soumettre un nouveau (sans frais)."
+      "Les déménageurs ont une semaine pour répondre. Dans la majorité des cas, vous recevez les premiers devis sous 48-72h, et l'ensemble sous 7 jours maximum."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Devis & comparaison",
   },
   {
-    q: "Quels éléments dois-je obligatoirement fournir pour créer mon dossier?",
+    q: "Pourquoi 5+ devis plutôt qu'un seul ?",
     a: [
-      "Des photos de chaque pièce et des objets à déménager, les grandes contraintes (accès, étages, ascenseur, stationnement), et vos préférences de prestations (emballage, démontage)."
+      "Comparer plusieurs devis vous permet de voir la fourchette de prix du marché, d'identifier les prestations incluses/non incluses, et de choisir le meilleur rapport qualité/prix. Vous évitez aussi de payer trop cher ou de tomber sur une offre trop basse (souvent synonyme de mauvaises surprises)."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Devis & comparaison",
   },
   {
-    q: "Qui remplit la déclaration de valeur?",
+    q: "Les devis sont-ils vraiment comparables ?",
     a: [
-      "Vous, avec nos conseils. Les déménageurs la valident avant intervention."
+      "Oui. Tous les déménageurs reçoivent exactement le même dossier (volume, adresses, contraintes, prestations). Vous pouvez comparer les prix, les prestations incluses, les assurances, et les avis clients sur une base commune."
     ],
-    category: "Constitution du dossier (photos & inventaire)",
+    category: "Devis & comparaison",
   },
-  {
-    q: "Étudiant : comment déménager à petit budget?",
-    a: [
-      "Conseils d'optimisation, jours creux, entraide. Comparez gratuitement plusieurs offres."
-    ],
-    category: "Constitution du dossier (photos & inventaire)",
-  },
-  {
-    q: "Aides financières / seniors",
-    a: [
-      "Liens/infos utiles selon votre situation et votre ville."
-    ],
-    category: "Constitution du dossier (photos & inventaire)",
-  },
-  {
-    q: "Dois-je fournir mes cartons?",
-    a: [
-      "Souvent oui pour l'option économique. Des options \"emballage inclus\" existent dans les devis."
-    ],
-    category: "Constitution du dossier (photos & inventaire)",
-  },
-  // Processus & délais
   {
     q: "Puis-je obtenir un devis sans visite technique ?",
     a: [
-      "Oui. Dans la plupart des cas, les déménageurs établissent un devis sans visite. Pour se couvrir en cas d'informations incomplètes, ils ajoutent souvent une marge de sécurité ce qui peut conduire à une légère surfacturation pour le client. À l'inverse, si le volume est sous-estimé, le professionnel peut être en perte et demander un ajustement. Certaines entreprises réalisent des visites techniques, mais leur coût (temps, déplacement) est généralement répercuté dans le prix final. Avec Moverz, vous obtenez le meilleur des deux mondes: un dossier photo complet (30 min) qui offre la précision d'une visite, sans en supporter le coût; les déménageurs reçoivent des informations standardisées et comparables, ce qui limite les marges d'incertitude."
+      "Oui, et c'est même recommandé. Les visites sont coûteuses et souvent répercutées dans le prix. Avec un dossier détaillé (volume, contraintes, photos optionnelles), les déménageurs disposent de toutes les informations nécessaires pour établir un devis précis."
     ],
-    category: "Processus & délais",
+    category: "Devis & comparaison",
   },
   {
-    q: "Quand vais-je recevoir des devis ?",
+    q: "Que se passe-t-il si je n'ai pas 5 devis après une semaine ?",
     a: [
-      "Nous laissons une semaine à nos partenaires pour répondre. Dans 90% des cas, vous recevez 3 à 5 devis sous une semaine."
+      "Notre équipe vous informe de l'état des retours, relance les déménageurs et peut élargir gratuitement la recherche à d'autres pros contrôlés jusqu'à atteindre 5+ propositions comparables."
     ],
-    category: "Processus & délais",
+    category: "Devis & comparaison",
+  },
+  // Sécurité & confiance
+  {
+    q: "Vais-je être harcelé par des appels ?",
+    a: [
+      "Non, 0 spam garanti. Votre dossier est anonymisé (pas de numéro de téléphone partagé). Vous recevez les devis par email et c'est vous qui contactez le déménageur de votre choix. Aucun démarchage téléphonique."
+    ],
+    category: "Sécurité & confiance",
   },
   {
-    q: "Que se passe-t-il si je n'ai pas 3 devis après une semaine ?",
+    q: "Comment sont contrôlés les déménageurs partenaires ?",
     a: [
-      "Nous vous informons de l'état des retours et vous proposons gratuitement d'étendre le délai et/ou d'élargir la recherche de partenaires."
+      "Tous nos partenaires sont certifiés, assurés et vérifiés (solvabilité, 0 litige majeur). Nous vérifions régulièrement leur qualité de service via les avis clients et les retours terrain."
     ],
-    category: "Processus & délais",
+    category: "Sécurité & confiance",
   },
   {
-    q: "Que se passe-t-il une fois mon dossier terminé?",
+    q: "Mes données sont-elles protégées ?",
     a: [
-      "Le dossier est anonymisé et partagé avec nos partenaires pendant une semaine. À l'issue, nous vous présentons une synthèse homogène et détaillée des devis reçus."
+      "Oui. Votre dossier est anonymisé (ville/quartier uniquement, pas d'adresse exacte ni de téléphone) tant que vous n'avez pas choisi un déménageur. Vos données sont protégées selon le RGPD et ne sont jamais revendues."
     ],
-    category: "Processus & délais",
+    category: "Sécurité & confiance",
   },
   {
-    q: "Quelle est la meilleure période pour déménager ?",
+    q: "Que se passe-t-il en cas de problème avec un déménageur ?",
     a: [
-      "Les tarifs sont généralement plus bas hors haute saison. Évitez si possible l'été (mai-septembre), les week-ends et les fins/débuts de mois. Privilégiez l'automne/hiver, en semaine et en milieu de mois, en réservant tôt si vous visez l'été."
+      "Notre équipe vous accompagne jusqu'au jour J. En cas de litige, nous intervenons comme médiateur entre vous et le déménageur pour trouver une solution. Tous nos partenaires sont assurés professionnellement."
     ],
-    category: "Processus & délais",
+    category: "Sécurité & confiance",
   },
   // Prestations & logistique
   {
     q: "Accès difficile/pas d'ascenseur: est-ce un problème?",
     a: [
       "Ces informations font partie de votre dossier. Signalez-les: elles seront prises en compte dans les devis des déménageurs."
+    ],
+    category: "Prestations & logistique",
+  },
+  {
+    q: "Quelle est la meilleure période pour déménager ?",
+    a: [
+      "Les tarifs sont généralement plus bas hors haute saison. Évitez si possible l'été (mai-septembre), les week-ends et les fins/débuts de mois. Privilégiez l'automne/hiver, en semaine et en milieu de mois. Réservez tôt si vous visez l'été."
+    ],
+    category: "Prestations & logistique",
+  },
+  {
+    q: "Dois-je fournir mes cartons ?",
+    a: [
+      "Non, la plupart des déménageurs proposent la fourniture de cartons (souvent inclus dans le devis). Vous pouvez aussi utiliser vos propres cartons s'ils sont solides. Des cartons spécifiques (verres, penderies) sont disponibles sur demande."
     ],
     category: "Prestations & logistique",
   },
@@ -288,15 +296,43 @@ export default function FAQPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   
-  // Emojis par catégorie
-  const categoryEmojis: Record<string, string> = {
-    "Toutes": "📋",
-    "Constitution du dossier (photos & inventaire)": "📸",
-    "Processus & délais": "⏱️",
-    "Prestations & logistique": "🚚",
-    "Tarifs & paiement": "💰",
-    "Fonctionnement & partenaires": "🤝",
-    "Assurances & données": "🔒"
+  // Pictogrammes SVG par catégorie
+  const categoryIcons: Record<string, JSX.Element> = {
+    "Toutes": (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+      </svg>
+    ),
+    "Constitution du dossier (photos & inventaire)": (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    "Processus & délais": (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    "Prestations & logistique": (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+      </svg>
+    ),
+    "Tarifs & paiement": (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    "Fonctionnement & partenaires": (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    "Assurances & données": (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+    )
   };
   
   // Récupérer toutes les catégories uniques
@@ -315,46 +351,34 @@ export default function FAQPage() {
     <main className="bg-hero min-h-screen">
       <div className="halo" />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden text-white">
-        {/* Image de fond avec overlay */}
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop"
-            alt="FAQ Déménagement ${city.nameCapitalized} - Questions fréquentes"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/88 to-[#04163a]/92"></div>
-        </div>
-
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="text-center max-w-4xl mx-auto">
+      {/* Hero Section - Version Stripe */}
+      <section className="section section-contrast relative overflow-hidden">
+        <div className="container relative">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
             <Breadcrumbs
               items={[
                 { label: "Accueil", href: "/" },
                 { label: "FAQ", href: "/faq/" }
               ]}
             />
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6 mt-6">
-              <span className="text-2xl">❓</span>
-              <span className="text-sm font-medium text-white">Questions Fréquentes</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+              Questions Fréquentes
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-white leading-tight">
               FAQ — Déménagement à {city.nameCapitalized}
             </h1>
-            <p className="text-lg md:text-xl text-white/90">
+            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed font-light">
               Vous trouverez ici les réponses aux questions les plus fréquentes. Pour un chiffrage précis, utilisez notre{" "}
-              <a className="underline text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors" href="/estimation-rapide/">devis de déménagement à ${city.nameCapitalized}</a>.
+              <a className="underline text-[#6BCFCF] hover:text-[#6BCFCF]/80 transition-colors font-medium" href="/estimation-rapide/">devis de déménagement à {city.nameCapitalized}</a>.
             </p>
           </div>
         </div>
       </section>
 
-      <div className="section">
+      {/* Section FAQ - Fond clair */}
+      <section className="section section-light">
         <div className="container">
 
         {/* Barre de recherche */}
@@ -365,10 +389,10 @@ export default function FAQPage() {
               placeholder="Rechercher une question... (ex: prix, cartons, assurance)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-5 py-4 pl-12 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#6bcfcf] focus:border-transparent transition-all"
+              className="w-full px-5 py-4 pl-12 rounded-2xl bg-white border border-[#E3E5E8] text-[#04163a] placeholder-[#4b5c6b]/50 focus:outline-none focus:ring-2 focus:ring-[#6bcfcf] focus:border-transparent transition-all shadow-sm"
             />
             <svg 
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#4b5c6b]/50"
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -378,7 +402,7 @@ export default function FAQPage() {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#4b5c6b]/50 hover:text-[#04163a] transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -387,7 +411,7 @@ export default function FAQPage() {
             )}
           </div>
           {searchQuery && (
-            <p className="text-sm text-white/60 mt-2 text-center">
+            <p className="text-sm text-[#4b5c6b] mt-2 text-center">
               {filteredFaqs.length} résultat{filteredFaqs.length > 1 ? 's' : ''} trouvé{filteredFaqs.length > 1 ? 's' : ''}
             </p>
           )}
@@ -395,8 +419,8 @@ export default function FAQPage() {
 
         {/* Filtres par catégorie */}
         <div className="mt-8">
-          <h2 className="text-lg font-medium text-white/90 mb-4">Filtrer par catégorie :</h2>
-          <div className="flex flex-wrap gap-2">
+          <h2 className="text-lg font-medium text-[#04163a] mb-4">Filtrer par catégorie :</h2>
+          <div className="flex flex-wrap gap-3">
             {categories.map((category) => {
               const count = faqs.filter(faq => category === "Toutes" || faq.category === category).length;
               return (
@@ -406,14 +430,17 @@ export default function FAQPage() {
                     setSelectedCategory(category);
                     setSearchQuery(""); // Reset search when changing category
                   }}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-[#6bcfcf] text-[#04163a] shadow-lg"
-                      : "bg-white/10 text-white/70 hover:bg-white/20 hover:text-white"
+                      ? "bg-[#6BCFCF] text-[#04163a] shadow-lg scale-105"
+                      : "bg-white text-[#4b5c6b] hover:bg-[#F8F9FA] hover:text-[#04163a] border border-[#E3E5E8] hover:border-[#6BCFCF]/30 shadow-sm"
                   }`}
                 >
-                  <span className="mr-1">{categoryEmojis[category] || "📄"}</span>
-                  {category} <span className="text-xs opacity-70">({count})</span>
+                  <span className={selectedCategory === category ? "text-[#04163a]" : "text-[#4b5c6b]"}>
+                    {categoryIcons[category] || categoryIcons["Toutes"]}
+                  </span>
+                  <span className="truncate max-w-[200px]">{category}</span>
+                  <span className="text-xs opacity-70">({count})</span>
                 </button>
               );
             })}
@@ -431,36 +458,36 @@ export default function FAQPage() {
               }, {} as Record<string, QA[]>)
             ).map(([category, items]) => (
               <div key={category} className="space-y-4">
-                <h2 className="text-2xl font-semibold text-accent border-b border-accent/20 pb-2">
+                <h2 className="text-2xl font-semibold text-[#2B7A78] border-b border-[#2B7A78]/20 pb-2">
                   {category}
                 </h2>
                 <div className="space-y-3">
                   {items.map((item) => (
-                    <details key={item.q} className="card-glass rounded-2xl p-5 open:shadow-lg">
-                      <summary className="cursor-pointer text-lg font-medium">{item.q}</summary>
-                      <div className="mt-3 space-y-3 text-white/85">
+                    <details key={item.q} className="bg-white border border-[#E3E5E8] rounded-3xl p-5 open:shadow-lg hover:border-[#6BCFCF]/30 transition-all duration-300">
+                      <summary className="cursor-pointer text-lg font-medium text-[#04163a]">{item.q}</summary>
+                      <div className="mt-3 space-y-3 text-[#04163a]">
                         {item.a.map((p, i) => (
                           <p key={i}>{p}</p>
                         ))}
                         {/* Maillage contextuel quand pertinent */}
                         {item.q.includes("prix") && (
-                          <p className="text-sm text-white/70">
+                          <p className="text-sm text-[#4b5c6b]">
                             Voir aussi :{" "}
-                            <a className="underline text-accent" href={`/${city.slug}/`}>Prix d'un déménagement à {city.nameCapitalized}</a>.
+                            <a className="underline text-[#6BCFCF] hover:text-[#2B7A78] transition-colors" href={`/${city.slug}/`}>Prix d'un déménagement à {city.nameCapitalized}</a>.
                           </p>
                         )}
                         {item.q.includes("quartiers") && QUARTIERS.length >= 3 && (
-                          <p className="text-sm text-white/70">
+                          <p className="text-sm text-[#4b5c6b]">
                             Utile :{" "}
-                            <a className="underline text-accent" href={`/${city.slug}/${QUARTIERS[0].slug}/`}>{QUARTIERS[0].title}</a>,{" "}
-                            <a className="underline text-accent" href={`/${city.slug}/${QUARTIERS[1].slug}/`}>{QUARTIERS[1].title}</a>,{" "}
-                            <a className="underline text-accent" href={`/${city.slug}/${QUARTIERS[2].slug}/`}>{QUARTIERS[2].title}</a>.
+                            <a className="underline text-[#6BCFCF] hover:text-[#2B7A78] transition-colors" href={`/${city.slug}/${QUARTIERS[0].slug}/`}>{QUARTIERS[0].title}</a>,{" "}
+                            <a className="underline text-[#6BCFCF] hover:text-[#2B7A78] transition-colors" href={`/${city.slug}/${QUARTIERS[1].slug}/`}>{QUARTIERS[1].title}</a>,{" "}
+                            <a className="underline text-[#6BCFCF] hover:text-[#2B7A78] transition-colors" href={`/${city.slug}/${QUARTIERS[2].slug}/`}>{QUARTIERS[2].title}</a>.
                           </p>
                         )}
                         {item.q.includes("estimer le volume") && (
-                          <p className="text-sm text-white/70">
+                          <p className="text-sm text-[#4b5c6b]">
                             Lancez votre{" "}
-                            <a className="underline text-accent" href="/estimation-rapide/">estimation de déménagement</a>{" "}
+                            <a className="underline text-[#6BCFCF] hover:text-[#2B7A78] transition-colors" href="/estimation-rapide/">estimation de déménagement</a>{" "}
                             en quelques minutes.
                           </p>
                         )}
@@ -511,81 +538,118 @@ export default function FAQPage() {
             </div>
           )}
         </div>
+        </div>
+      </section>
 
-        {/* Ressources complémentaires */}
-        <div className="mt-16 mb-10">
+      {/* Ressources complémentaires - Fond sombre */}
+      <section className="section section-contrast">
+        <div className="container">
           <h2 className="text-2xl font-semibold text-white mb-8 text-center">
             Ressources utiles pour votre déménagement
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {/* Services */}
-            <div className="card-glass rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                📦 Nos formules
-              </h3>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/20 border border-[#6BCFCF]/30">
+                  <svg className="w-5 h-5 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white">Nos formules</h3>
+              </div>
               <div className="space-y-3">
-                <a href="/services/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Comparer les 3 formules
+                <a href="/services/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Comparer les 3 formules</span>
                 </a>
-                <a href="/services/demenagement-economique-marseille/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Formule Économique (dès 280€)
+                <a href="/services/demenagement-economique-nice/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Formule Économique (dès 280€)</span>
                 </a>
-                <a href="/services/demenagement-standard-marseille/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Formule Standard (dès 600€)
+                <a href="/services/demenagement-standard-nice/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Formule Standard (dès 600€)</span>
                 </a>
               </div>
             </div>
 
             {/* Blog */}
-            <div className="card-glass rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                📚 Guides pratiques
-              </h3>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/20 border border-[#6BCFCF]/30">
+                  <svg className="w-5 h-5 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white">Guides pratiques</h3>
+              </div>
               <div className="space-y-3">
-                <a href="/blog/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Guide complet déménagement
+                <a href="/blog/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Guide complet déménagement</span>
                 </a>
-                <a href="/blog/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Combien de cartons prévoir ?
+                <a href="/blog/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Combien de cartons prévoir ?</span>
                 </a>
-                <a href="/blog/prix/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Prix 2025 : tout comprendre
+                <a href="/blog/prix/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Prix 2025 : tout comprendre</span>
                 </a>
               </div>
             </div>
 
             {/* Local */}
-            <div className="card-glass rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                📍 Infos locales
-              </h3>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#6BCFCF]/20 border border-[#6BCFCF]/30">
+                  <svg className="w-5 h-5 text-[#6BCFCF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white">Infos locales</h3>
+              </div>
               <div className="space-y-3">
-                <a href={`/${city.slug}/`} className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Déménagement {city.nameCapitalized}
+                <a href={`/${city.slug}/`} className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Déménagement {city.nameCapitalized}</span>
                 </a>
-                <a href="/quartiers-marseille/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Tous les quartiers
+                <a href="/quartiers-nice/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Tous les quartiers</span>
                 </a>
-                <a href="/estimation-rapide/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm">
-                  → Estimation rapide
+                <a href="/estimation-rapide/" className="block text-[#6BCFCF] hover:text-white transition-colors text-sm flex items-center gap-2 group">
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  <span>Estimation rapide</span>
                 </a>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* CTA Final */}
-        <div className="mt-10 text-center">
-          <h2 className="text-xl font-semibold text-white mb-4">
-            Prêt à déménager ?
-          </h2>
-          <a href="/inventaire-ia/" className="inline-flex rounded-2xl bg-[#6bcfcf] px-8 py-4 text-lg font-semibold text-[#04163a] hover:bg-[#6bcfcf]/90 transition duration-300">
-            Obtenez vos devis précis gratuitement
+      {/* CTA Final - Fond clair */}
+      <section className="section section-light">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-[#04163a] mb-6">
+              Prêt à déménager ?
+            </h2>
+          <a 
+            href="/devis-gratuits/" 
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+            <span className="relative">Obtenez vos devis précis gratuitement</span>
+            <svg className="relative w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </a>
+          </div>
         </div>
-        </div>
-      </div>
+      </section>
 
       {/* Bouton Scroll to Top */}
       {showScrollTop && (

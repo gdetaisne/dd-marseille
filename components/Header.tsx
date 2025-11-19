@@ -6,7 +6,7 @@ import { getCityData } from '@/lib/cityData';
 
 // Fonction client-side pour résoudre la ville depuis hostname
 function getCityFromHostname(): string {
-  if (typeof window === 'undefined') return 'marseille';
+  if (typeof window === 'undefined') return 'nice';
   const hostname = window.location.hostname.toLowerCase();
   // Cas spéciaux
   if (hostname.includes('toulousain')) return 'toulouse';
@@ -14,13 +14,14 @@ function getCityFromHostname(): string {
   // Pattern standard: devis-demenageur-ville.fr
   const cities = ['strasbourg', 'nice', 'lyon', 'marseille', 'nantes', 'lille', 'rennes', 'rouen', 'montpellier', 'toulouse', 'bordeaux'];
   const found = cities.find(city => hostname.includes(city));
-  return found || 'marseille';
+  return found || 'nice';
 }
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isZonesDropdownOpen, setIsZonesDropdownOpen] = useState(false);
   const zonesDropdownRef = useRef<HTMLDivElement>(null);
+
   // Résoudre cityData dynamiquement
   const city = useMemo(() => {
     const citySlug = getCityFromHostname();
@@ -45,8 +46,6 @@ export default function Header() {
       label: `${city.nameCapitalized} → ${c.destination}`
     }));
   }, [city]);
-
-
 
   // Fermer les dropdowns quand on clique ailleurs
   useEffect(() => {
@@ -81,10 +80,8 @@ export default function Header() {
   };
 
 
-
-
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/5 border-b border-white/10">
+    <header className="sticky top-0 z-50 bg-[#04163a] border-b border-white/10 shadow-md">
       <div className="container max-w-7xl mx-auto px-4 md:px-6 py-2 flex items-center justify-between">
         {/* Logo */}
         <Link 
@@ -212,11 +209,11 @@ export default function Header() {
         {/* CTA Button */}
         <div className="flex items-center gap-3">
           <Link 
-            href="/inventaire-ia" 
+            href="/devis-gratuits" 
             className="hidden sm:inline-flex h-11 items-center justify-center rounded-2xl bg-[#2b7a78] px-5 text-sm font-medium text-white shadow-marketing-xl hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 transition duration-300"
             onClick={() => trackClick('cta-header')}
           >
-            Obtenir 5 devis gratuits
+            Comparez 5+ devis fiables gratuitement
           </Link>
           
           {/* Mobile Menu Button */}
@@ -322,14 +319,14 @@ export default function Header() {
             {/* CTA Mobile */}
             <div className="pt-4 border-t border-gray-200">
               <Link
-                href="/inventaire-ia"
+                href="/devis-gratuits"
                 className="block w-full text-center h-11 items-center justify-center rounded-2xl bg-[#2b7a78] px-5 text-sm font-medium text-white shadow-marketing-xl hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 transition duration-300"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   trackClick('mobile-cta');
                 }}
               >
-                Obtenir 5 devis gratuits
+                Comparez 5+ devis fiables gratuitement
               </Link>
             </div>
           </div>

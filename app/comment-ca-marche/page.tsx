@@ -1,428 +1,352 @@
 import React from "react";
+import type { Metadata } from "next";
+
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getCanonicalUrl } from "@/lib/canonical-helper";
-
-import type { Metadata } from 'next'
+import { getCityDataFromUrl } from "@/lib/cityData";
+import { env } from "@/lib/env";
 
 export const metadata: Metadata = {
-  title: "Comment ça marche ? Déménagement Marseille en 3 étapes | Moverz",
-  description: "Découvrez notre processus simple pour déménager à Marseille : 1) Inventaire IA gratuit en 30 min 2) Recevez 3 devis sous 7j 3) Choisissez votre déménageur. 100% gratuit, sans engagement.",
+  title: "Comment ça marche ? Déménagement Nice en 3 étapes | Moverz",
+  description:
+    "Créez un inventaire IA unique en 30 min, recevez 5+ devis de déménageurs contrôlés (solvabilité vérifiée, 0 litige) et choisissez sans harcèlement. 100% gratuit.",
   alternates: {
-    canonical: getCanonicalUrl('comment-ca-marche'),
+    canonical: getCanonicalUrl("comment-ca-marche"),
   },
   openGraph: {
-    title: "Comment ça marche ? Déménagement Marseille simplifié | Moverz",
-    description: "Processus simple et transparent : photos + IA + devis personnalisés. Déménagez sereinement à Marseille.",
-    url: getCanonicalUrl('comment-ca-marche'),
-    type: 'website',
+    title: "Processus IA anti-arnaque : 5+ devis comparables à Nice | Moverz",
+    description:
+      "Notre IA calcule votre volume exact et l'envoie à 5+ déménageurs contrôlés. Recevez des devis comparables en 7 jours, sans appels intrusifs.",
+    url: getCanonicalUrl("comment-ca-marche"),
+    type: "website",
   },
-}
-
+};
 
 export default function CommentCaMarchePage() {
+  const city = getCityDataFromUrl(env.SITE_URL);
+
+  const steps = [
+    {
+      number: "1",
+      icon: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+      title: "Créez votre dossier unique",
+      description:
+        "Quelques infos clés sur votre déménagement (adresses, accès, volume estimé, contraintes). Un seul dossier pour tous les déménageurs.",
+    },
+    {
+      number: "2",
+      icon: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+        </svg>
+      ),
+      title: "Nous filtrons les déménageurs",
+      description:
+        "On ne garde que les pros fiables, bien notés et assurés. Votre dossier reste anonyme : vous gardez la main.",
+    },
+    {
+      number: "3",
+      icon: (
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+      ),
+      title: "Vous comparez 5+ devis fiables",
+      description:
+        "Même base, mêmes options, même volume estimé : des devis enfin comparables, sans appels commerciaux non souhaités.",
+    },
+  ];
+
   return (
     <main className="bg-hero">
       <div className="halo" />
-      
-      {/* Hero Section */}
-      <section className="relative overflow-hidden text-white">
-        {/* Image de fond avec overlay */}
-        <div className="absolute inset-0">
-          <img 
-            src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?q=80&w=2000&auto=format&fit=crop"
-            alt="Processus de déménagement simplifié"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#04163a]/95 via-[#2b7a78]/90 to-[#04163a]/90"></div>
-        </div>
 
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-        
-        <div className="relative mx-auto max-w-7xl px-6 py-16 md:px-12 md:py-24 lg:py-32">
-          <div className="text-center">
-            <Breadcrumbs 
+      {/* Hero Stripe-like */}
+      <section className="section section-contrast relative overflow-hidden">
+        <div className="container relative">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <Breadcrumbs
               items={[
                 { label: "Accueil", href: "/" },
-                { label: "Comment ça marche", href: "/comment-ca-marche/" }
+                { label: "Comment ça marche", href: "/comment-ca-marche" },
               ]}
             />
-            <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Comment ça marche : votre déménagement simplifié
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+              Processus en 3 étapes
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-white leading-tight">
+              Comment fonctionne le comparateur de devis ?
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-              Un processus simple et transparent. Prenez vos photos, notre IA calcule votre volume, 
-              vous recevez vos devis précis gratuitement. Nous nous occupons de tout le reste. Sans stress, sans engagement.
+            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed font-light">
+              L'objectif est simple :{" "}
+              <span className="font-semibold text-white">
+                comparer des devis vraiment comparables
+              </span>{" "}
+              pour votre déménagement à {city.nameCapitalized},{" "}
+              <span className="font-semibold text-[#6BCFCF]">
+                sans spam ni appels commerciaux
+              </span>
+              .
             </p>
           </div>
         </div>
       </section>
 
-      {/* Étapes détaillées */}
-      <section className="section">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-white text-center mb-12">
-              Le processus complet de votre déménagement
-            </h2>
-            
-            <div className="space-y-12">
-              {/* Étape 1 */}
-              <div className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#6bcfcf] flex items-center justify-center text-[#04163a] font-bold text-xl">
-                  1
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Prenez vos photos</h3>
-                  <p className="text-white/80 leading-relaxed mb-6">
-                    Photographiez tous vos biens depuis votre smartphone. Il faut viser 3 à 5 photos par pièce 
-                    pour une estimation optimale. Pas besoin d'être photographe professionnel !
-                  </p>
-                  
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Conseils pour de bonnes photos :</h4>
-                    <ul className="space-y-2 text-white/80">
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Cadrage large à hauteur de poitrine</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Inclure plafonniers, lampes, objets fragiles</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Plusieurs angles ok → un objet compté une seule fois</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <span className="bg-[#6bcfcf] text-[#04163a] px-4 py-2 rounded-full text-sm font-bold">
-                      ⏱️ 15 minutes
-                    </span>
-                    <span className="text-white/60 text-sm">Temps nécessaire</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 2 */}
-              <div className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#6bcfcf] flex items-center justify-center text-[#04163a] font-bold text-xl">
-                  2
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Notre IA calcule votre volume</h3>
-                  <p className="text-white/80 leading-relaxed mb-6">
-                    Notre intelligence artificielle analyse vos photos et calcule le volume que représentent 
-                    vos biens dans le cadre d'un déménagement, en tenant compte de l'emballage nécessaire.
-                  </p>
-                  
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Ce que fait notre IA :</h4>
-                    <ul className="space-y-2 text-white/80">
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Identification automatique de tous vos objets</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Calcul précis du volume en m³</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Prise en compte de l'emballage nécessaire</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Estimation fiable à 90% dès la première fois</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <span className="bg-[#6bcfcf] text-[#04163a] px-4 py-2 rounded-full text-sm font-bold">
-                      ⚡ 2 minutes
-                    </span>
-                    <span className="text-white/60 text-sm">Traitement automatique</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 3 */}
-              <div className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#6bcfcf] flex items-center justify-center text-[#04163a] font-bold text-xl">
-                  3
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Dites-nous vers où vous déménagez et le type de prestation</h3>
-                  <p className="text-white/80 leading-relaxed mb-6">
-                    Indiquez votre destination et précisez le type de service souhaité (économique, standard, premium) 
-                    pour que nous puissions vous proposer les meilleures options.
-                  </p>
-                  
-                  <div className="flex items-center gap-4 mb-8">
-                    <span className="bg-[#6bcfcf] text-[#04163a] px-4 py-2 rounded-full text-sm font-bold">
-                      ⏱️ 5 minutes
-                    </span>
-                    <span className="text-white/60 text-sm">Temps nécessaire</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 4 - Nous nous occupons de... */}
-              <div className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#2b7a78] flex items-center justify-center text-white font-bold text-xl">
-                  ✓
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Nous nous occupons de la sélection des déménageurs et de la collecte des devis</h3>
-                  <p className="text-white/80 leading-relaxed mb-6">
-                    Nous choisissons les déménageurs professionnels proches de chez vous les plus adaptés 
-                    à votre demande, leur soumettons votre dossier et collectons les devis en 3 à 4 jours (max 7 jours).
-                  </p>
-                </div>
-              </div>
-
-              {/* Étape 5 - Nous nous occupons de... */}
-              <div className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#2b7a78] flex items-center justify-center text-white font-bold text-xl">
-                  ✓
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Nous nous occupons de la comparaison et de la présentation des offres</h3>
-                  <p className="text-white/80 leading-relaxed mb-6">
-                    Nous analysons tous les devis reçus, vérifions leur cohérence avec vos besoins 
-                    et vous présentons trois offres finales, claires et comparables.
-                  </p>
-                  
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Ce que vous recevez :</h4>
-                    <ul className="space-y-2 text-white/80">
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>3 à 5 devis détaillés et comparables</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Prix transparents, aucun frais caché</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Partenaires qualifiés et assurés</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-[#6bcfcf] mt-1">•</span>
-                        <span>Service 100% gratuit, sans engagement</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <span className="bg-[#6bcfcf] text-[#04163a] px-4 py-2 rounded-full text-sm font-bold">
-                      📅 3-7 jours
-                    </span>
-                    <span className="text-white/60 text-sm">Délai de réception</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 6 */}
-              <div className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#6bcfcf] flex items-center justify-center text-[#04163a] font-bold text-xl">
-                  4
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Vous sélectionnez et payez 30% d'acompte</h3>
-                  <p className="text-white/80 leading-relaxed mb-6">
-                    Choisissez l'offre qui vous convient et validez votre réservation en payant 
-                    30% d'acompte en ligne de manière sécurisée (norme de marché imposée par nos partenaires déménageurs).
-                  </p>
-                  
-                  <div className="flex items-center gap-4 mb-8">
-                    <span className="bg-[#6bcfcf] text-[#04163a] px-4 py-2 rounded-full text-sm font-bold">
-                      ⏱️ 5 minutes
-                    </span>
-                    <span className="text-white/60 text-sm">Temps nécessaire</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 7 - Nous nous occupons de... */}
-              <div className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#2b7a78] flex items-center justify-center text-white font-bold text-xl">
-                  ✓
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Nous nous occupons de la mise en relation avec le déménageur</h3>
-                  <p className="text-white/80 leading-relaxed mb-6">
-                    Nous vous mettons en relation avec le déménageur choisi pour que vous puissiez 
-                    commencer votre déménagement dans les meilleures conditions.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Avantages de notre méthode */}
-      <section className="section bg-white/5">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-white text-center mb-12">
-              Pourquoi cette méthode est-elle plus efficace ?
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#6bcfcf] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-[#04163a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Gain de temps exceptionnel</h3>
-                </div>
-                <p className="text-white/80">
-                  Fini les visites à domicile et les calculs manuels. En 30 minutes, vous obtenez 
-                  une estimation précise et recevez plusieurs devis comparables. Un processus 
-                  qui prendrait normalement plusieurs semaines se fait en quelques jours.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#6bcfcf] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-[#04163a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Précision garantie</h3>
-                </div>
-                <p className="text-white/80">
-                  Notre IA analyse chaque photo avec une précision de 90%. Plus d'erreurs d'estimation 
-                  ni de mauvaises surprises. Les déménageurs reçoivent un dossier complet et standardisé.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#6bcfcf] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-[#04163a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Devis comparables</h3>
-                </div>
-                <p className="text-white/80">
-                  Tous nos partenaires reçoivent le même dossier standardisé. Vous comparez des offres 
-                  équivalentes sur des critères identiques. Plus de devis incomparables !
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#6bcfcf] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-[#04163a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">Économies significatives</h3>
-                </div>
-                <p className="text-white/80">
-                  Recevez des devis précisément adaptés à votre besoin. Plus besoin de marge de manœuvre 
-                  pour compenser l'incertitude. Vous payez le juste prix.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ éclair */}
-      <section className="section">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-white text-center mb-12">
-              FAQ éclair
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">Combien de photos faut-il ?</h3>
-                <p className="text-white/80 text-sm">
-                  Tout ce qui doit être déménagé. 3 à 10 par pièce. Plafonniers/lampes inclus. 
-                  Vous pouvez prendre plusieurs photos d'un même objet : il ne sera compté qu'une fois.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">L'estimation m³ est-elle fiable ?</h3>
-                <p className="text-white/80 text-sm">
-                  Très fiable dès la première estimation (~90%). Vous pouvez ajuster ensuite. 
-                  Nos partenaires valident et affinent : précision élevée.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">Puis-je utiliser une vidéo ?</h3>
-                <p className="text-white/80 text-sm">
-                  Nous avons constaté des résultats moins fiables. Nous recommandons les photos 
-                  pour une estimation optimale.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">Objets fragiles (art, instruments) ?</h3>
-                <p className="text-white/80 text-sm">
-                  Identifiés et pris en compte ; emballage adapté recommandé. 
-                  Déclaration de valeur conseillée.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">Étudiant : comment déménager à petit budget ?</h3>
-                <p className="text-white/80 text-sm">
-                  Conseils d'optimisation, jours creux, entraide. 
-                  Comparez gratuitement plusieurs offres.
-                </p>
-              </div>
-
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">Dois-je fournir mes cartons ?</h3>
-                <p className="text-white/80 text-sm">
-                  Souvent oui pour l'option économique. Des options "emballage inclus" 
-                  existent dans les devis.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="section bg-white/5">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">
-              Prêt à déménager en toute simplicité ?
-            </h2>
-            <p className="text-lg text-white/80 leading-relaxed mb-8">
-              Commencez votre estimation gratuite dès maintenant. 
-              Prenez vos photos, laissez notre IA calculer votre volume, recevez vos devis précis.
+      {/* Étapes en 3 cartes - Version Stripe */}
+      <section className="section section-light">
+        <div className="container space-y-12">
+          <div className="text-center space-y-4">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#2B7A78]">
+              Le processus
             </p>
-            
-            <a
-              href="/inventaire-ia/"
-              className="inline-flex h-12 items-center justify-center rounded-2xl bg-[#6bcfcf] px-8 text-lg font-semibold text-[#04163a] shadow-lg hover:bg-[#6bcfcf]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6bcfcf]/50 transition duration-300"
-            >
-              Obtenez vos devis précis gratuitement
-            </a>
-            
-            <p className="text-sm text-white/60 mt-6">
-              ⚡ Estimation en 30 minutes • 🔒 100% sécurisé • 💰 Gratuit et sans engagement
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
+              Les 3 étapes, concrètement
+            </h2>
+            <p className="text-base md:text-lg text-[#4b5c6b] max-w-2xl mx-auto leading-relaxed font-light">
+              Un seul fil conducteur : vous gardez la main sur votre dossier,
+              nous gérons la partie compliquée.
             </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3 md:gap-6">
+            {steps.map((step, index) => (
+              <div
+                key={step.number}
+                className="group relative flex flex-col gap-4 rounded-3xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] hover:border-[#6BCFCF]/40 motion-safe:animate-fade-up-soft"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Glow effect au hover */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#6BCFCF]/0 to-[#4FB8B8]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-5" />
+                
+                <div className="relative flex flex-col items-center gap-4">
+                  {/* Numéro + Pictogramme */}
+                  <div className="relative">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6BCFCF]/20 to-[#4FB8B8]/30 border-2 border-[#6BCFCF]/30 text-[#2B7A78] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]">
+                      {step.icon}
+                    </div>
+                    {/* Badge numéro */}
+                    <div className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-[#2B7A78] text-xs font-bold text-white shadow-lg">
+                      {step.number}
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2 text-center">
+                    <h3 className="text-lg md:text-xl font-bold text-[#04163a] leading-tight">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-[#4b5c6b] leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ce que vous gagnez / évitez / reste - Version Stripe */}
+      <section className="section section-contrast">
+        <div className="container space-y-12">
+          <div className="text-center space-y-4">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              Bénéfices concrets
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Ce que ça change pour vous
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3 md:gap-6">
+            {/* Ce que vous gagnez */}
+            <div className="group rounded-3xl border border-white/15 bg-white/5 backdrop-blur-sm p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)] hover:border-white/30 hover:bg-white/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6BCFCF]/30 to-[#4FB8B8]/40 border-2 border-[#6BCFCF]/40 mb-4 transition-all duration-300 group-hover:scale-110">
+                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-3">
+                Ce que vous gagnez
+              </h3>
+              <ul className="space-y-2 text-sm md:text-base text-white/80">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6BCFCF] mt-0.5">·</span>
+                  <span><span className="font-semibold text-white">30 minutes</span> pour créer un dossier propre</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6BCFCF] mt-0.5">·</span>
+                  <span><span className="font-semibold text-white">5+ devis</span> reçus sans relances ni visites</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Ce que l'on évite */}
+            <div className="group rounded-3xl border border-white/15 bg-white/5 backdrop-blur-sm p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)] hover:border-white/30 hover:bg-white/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-red-500/30 to-red-600/40 border-2 border-red-500/40 mb-4 transition-all duration-300 group-hover:scale-110">
+                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-3">
+                Ce que l'on évite
+              </h3>
+              <ul className="space-y-2 text-sm md:text-base text-white/80">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-0.5">·</span>
+                  <span><span className="font-semibold text-white">Devis incomparables</span>, formats différents</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-0.5">·</span>
+                  <span><span className="font-semibold text-white">Appels commerciaux</span> non sollicités</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Ce que ça reste */}
+            <div className="group rounded-3xl border border-white/15 bg-white/5 backdrop-blur-sm p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)] hover:border-white/30 hover:bg-white/10">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6BCFCF]/30 to-[#4FB8B8]/40 border-2 border-[#6BCFCF]/40 mb-4 transition-all duration-300 group-hover:scale-110">
+                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-3">
+                Ce que ça reste
+              </h3>
+              <ul className="space-y-2 text-sm md:text-base text-white/80">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6BCFCF] mt-0.5">·</span>
+                  <span><span className="font-semibold text-white">Gratuit</span>, sans engagement</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6BCFCF] mt-0.5">·</span>
+                  <span>Dossier <span className="font-semibold text-white">anonyme</span> jusqu'à votre choix final</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Qui fait quoi ? - Version Stripe */}
+      <section className="section section-light">
+        <div className="container space-y-12">
+          <div className="text-center space-y-4">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#2B7A78]">
+              Répartition des rôles
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
+              Qui fait quoi dans le process ?
+            </h2>
+            <p className="text-base md:text-lg text-[#4b5c6b] max-w-2xl mx-auto leading-relaxed font-light">
+              Vous vous concentrez sur vos critères et votre calendrier, nous
+              gérons la partie technique et la mise en forme des devis.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+            {/* Votre rôle */}
+            <div className="group rounded-3xl border border-[#E3E5E8] bg-white p-6 md:p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] hover:border-[#6BCFCF]/40">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#F8F9FA] border-2 border-[#E3E5E8] transition-all duration-300 group-hover:border-[#6BCFCF]/40">
+                  <svg className="h-6 w-6 text-[#4b5c6b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4b5c6b]">
+                    Votre rôle
+                  </p>
+                  <h3 className="text-lg md:text-xl font-bold text-[#04163a]">
+                    Ce que vous faites
+                  </h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-sm md:text-base text-[#4b5c6b]">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#2B7A78] mt-0.5">·</span>
+                  <span>Remplir <span className="font-semibold text-[#04163a]">un seul dossier</span> avec vos infos et contraintes</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#2B7A78] mt-0.5">·</span>
+                  <span>Préciser vos <span className="font-semibold text-[#04163a]">préférences</span> (budget, dates, niveau de service)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#2B7A78] mt-0.5">·</span>
+                  <span>Choisir le déménageur qui vous convient parmi les offres</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Notre rôle */}
+            <div className="group rounded-3xl border border-[#6BCFCF]/40 bg-gradient-to-br from-[#04163A] via-[#05243f] to-[#0b3b46] p-6 md:p-8 text-white shadow-[0_24px_70px_rgba(0,0,0,0.55)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_32px_90px_rgba(0,0,0,0.7)]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6BCFCF]/30 to-[#4FB8B8]/40 border-2 border-[#6BCFCF]/40 transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(107,207,207,0.4)]">
+                  <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6BCFCF]">
+                    Notre rôle
+                  </p>
+                  <h3 className="text-lg md:text-xl font-bold">
+                    Ce que fait le comparateur
+                  </h3>
+                </div>
+              </div>
+              <ul className="space-y-3 text-sm md:text-base text-white/85">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6BCFCF] mt-0.5">·</span>
+                  <span><span className="font-semibold text-white">Filtrer les déménageurs fiables</span> et adaptés à votre dossier</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6BCFCF] mt-0.5">·</span>
+                  <span>Aligner les devis sur la même base pour les rendre lisibles</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6BCFCF] mt-0.5">·</span>
+                  <span>Vous accompagner jusqu'au choix final si besoin</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="section section-contrast">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#04163A] via-[#05243f] to-[#0b3b46] p-8 md:p-12 text-center shadow-[0_24px_70px_rgba(0,0,0,0.55)]">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]" />
+              <div className="relative space-y-6">
+                <div className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/80">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF] animate-pulse" />
+                  Sans engagement · 0 spam · 5+ devis fiables
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                  Lancer mon comparateur de devis
+                </h2>
+                <p className="text-base md:text-lg text-white/80 max-w-xl mx-auto leading-relaxed">
+                  Pour votre déménagement à {city.nameCapitalized}, obtenez des
+                  devis alignés sur la même base, sans appels commerciaux non
+                  souhaités.
+                </p>
+                <a 
+                  href="/devis-gratuits/" 
+                  className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                  <span className="relative">Lancer mon comparateur de devis</span>
+                  <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

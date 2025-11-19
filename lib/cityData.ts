@@ -46,11 +46,11 @@ export const cityData: Record<string, CityData> = {
       { slug: 'plaine', name: 'La Plaine' }
     ],
     corridors: [
-      { slug: 'marseille-vers-paris', destination: 'Paris' },
-      { slug: 'marseille-vers-lyon', destination: 'Lyon' },
-      { slug: 'marseille-vers-toulouse', destination: 'Toulouse' },
-      { slug: 'marseille-vers-nantes', destination: 'Nantes' },
-      { slug: 'marseille-vers-espagne', destination: 'Espagne' }
+      { slug: 'paris', destination: 'Paris' },
+      { slug: 'lyon', destination: 'Lyon' },
+      { slug: 'toulouse', destination: 'Toulouse' },
+      { slug: 'nantes', destination: 'Nantes' },
+      { slug: 'espagne', destination: 'Espagne' }
     ]
   },
   

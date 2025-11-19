@@ -110,11 +110,6 @@ const nextConfig = {
       { source: '/blog/prix-demenagement-montpellier', destination: '/blog/', permanent: true },
       { source: '/blog/garde-meuble/garde-meuble-etudiant-ete', destination: '/blog/', permanent: true },
       
-      // Pages légales trailing slash
-      { source: '/mentions-legales/', destination: '/mentions-legales/', permanent: true },
-      { source: '/cgv/', destination: '/cgv/', permanent: true },
-      { source: '/politique-confidentialite/', destination: '/politique-confidentialite/', permanent: true },
-      
       // Anciennes URLs
       { source: '/estimation-demenagement-marseille/', destination: '/estimation-rapide/', permanent: true },
       { source: '/prix-demenagement-marseille/', destination: '/blog/', permanent: true },

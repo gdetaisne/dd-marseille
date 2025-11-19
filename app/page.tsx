@@ -3,14 +3,12 @@ import { getCityDataFromUrl } from "@/lib/cityData";
 import { env } from "@/lib/env";
 import { getCanonicalAlternates } from "@/lib/canonical-helper";
 import Hero from "@/components/Hero";
-import ValueTriad from "@/components/ValueTriad";
 import HowItWorks from "@/components/HowItWorks";
-import PhotoGuidelines from "@/components/PhotoGuidelines";
-import PricingPreview from "@/components/PricingPreview";
+import ComparisonSection from "@/components/ComparisonSection";
+import ProofStrip from "@/components/ProofStrip";
 import Testimonials from "@/components/Testimonials";
-import NeighborhoodsTeaser from "@/components/NeighborhoodsTeaser";
 import StickyCTA from "@/components/StickyCTA";
-import LocalMoneyFAQ from "@/components/LocalMoneyFAQ";
+import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = (() => {
   const city = getCityDataFromUrl(env.SITE_URL);
@@ -24,6 +22,24 @@ export const metadata: Metadata = (() => {
 
 export default function Home() {
   const city = getCityDataFromUrl(env.SITE_URL);
+  const shortFaq = [
+    {
+      q: "Est-ce vraiment gratuit ?",
+      a: "Oui. Le comparateur est 100% gratuit pour vous, nous sommes rémunérés par les déménageurs partenaires.",
+    },
+    {
+      q: "Pourquoi 5+ devis et pas un seul ?",
+      a: "Comparer plusieurs devis sur la même base permet de voir les écarts de prix et de service en un coup d'œil.",
+    },
+    {
+      q: "Comment sont choisis les déménageurs ?",
+      a: "Seuls les pros contrôlés (assurances, avis, historique) reçoivent votre dossier.",
+    },
+    {
+      q: "Est-ce que je vais être rappelé 10 fois ?",
+      a: "Non. Votre dossier reste anonyme : vous décidez vous‑même qui vous contactez et quand.",
+    },
+  ];
   
   return (
     <main className="bg-hero">
@@ -33,256 +49,97 @@ export default function Home() {
       <Hero />
 
       {/* 2. Comment ça marche */}
-      <section className="section py-16 md:py-20">
+      <section className="section section-light">
         <div className="container">
           <HowItWorks />
         </div>
       </section>
-      
-      {/* 3. Testimonials - Preuve sociale */}
-      <section className="section py-16 md:py-20 bg-gradient-to-br from-[#2b7a78]/15 to-[#04163a]/30 border-y border-white/20">
+
+      {/* 3. Comparatif – pourquoi notre comparateur est différent */}
+      <section className="section section-contrast">
+        <div className="container space-y-10">
+          <div className="text-center space-y-4">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#6BCFCF]">
+              Pourquoi ce comparateur
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Ce que vous gagnez vraiment
+            </h2>
+            <p className="text-base md:text-lg text-white/70 leading-relaxed max-w-2xl mx-auto font-light">
+              4 bénéfices concrets pour comparer sereinement vos devis.
+            </p>
+          </div>
+
+          <ComparisonSection />
+
+          <div className="text-center">
+            <a 
+              href="/devis-gratuits/" 
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-2xl bg-gradient-to-r from-[#6BCFCF] via-[#4FB8B8] to-[#3DA5A5] px-8 py-4 text-lg font-semibold text-[#04141f] shadow-[0_8px_30px_rgba(107,207,207,0.35)] hover:shadow-[0_12px_50px_rgba(107,207,207,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+              <span className="relative">Recevoir 5+ devis fiables gratuitement</span>
+              <span className="relative text-xl leading-none group-hover:translate-x-1 transition-transform duration-300">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Preuves chiffrées / confiance */}
+      <section className="section section-light">
+        <div className="container">
+          <ProofStrip />
+        </div>
+      </section>
+
+      {/* 5. Avis clients */}
+      <section className="section section-contrast">
         <div className="container">
           <Testimonials />
         </div>
       </section>
 
-      {/* 4. Pourquoi Moverz - Différenciation + Garanties */}
-      <section className="section py-16 md:py-20">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4">
-              Pourquoi choisir Moverz ?
+      {/* 6. FAQ ultra courte */}
+      <section className="section section-light">
+        <div className="container space-y-8">
+          <div className="text-center space-y-3">
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#2b7a78]">
+              FAQ
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#04163a] leading-tight">
+              Questions fréquentes
             </h2>
-            <p className="text-white/80 max-w-2xl mx-auto text-base md:text-lg">
-              La première plateforme qui compare vraiment les devis de déménagement
+            <p className="text-base md:text-lg text-[#04163a]/70 leading-relaxed max-w-2xl mx-auto font-light">
+              Les réponses aux questions qu'on nous pose le plus.
             </p>
           </div>
-
-          {/* Différenciation - Card simple et claire */}
-          <div className="max-w-3xl mx-auto mb-12">
-            <div className="card-glass rounded-2xl p-8 border-2 border-[#6bcfcf]/30">
-              <div className="flex items-start gap-4">
-                <div className="text-4xl flex-shrink-0">💡</div>
-                <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
-                    La différence Moverz
-                  </h3>
-                  <p className="text-white/80 leading-relaxed">
-                    Notre IA analyse vos photos pour créer <strong className="text-[#6bcfcf]">un inventaire unique</strong>. 
-                    Tous les déménageurs chiffrent le même volume → vous comparez enfin ce qui est comparable.
-                  </p>
-                  <div className="mt-4 inline-flex items-center gap-2 text-sm text-[#6bcfcf]">
-                    <span>✓</span>
-                    <span>Fini les devis incomparables</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Garanties - FOCUS principal */}
-          <div>
-            <ValueTriad />
+          <div className="max-w-4xl mx-auto">
+            <FAQAccordion items={shortFaq} />
           </div>
         </div>
       </section>
 
-      {/* 5. Tarifs indicatifs */}
-      <section className="section py-16 md:py-20 bg-gradient-to-br from-[#2b7a78]/25 to-[#6bcfcf]/10 border-y border-[#6bcfcf]/20">
+      {/* 7. Footer / CTA final */}
+      <section className="section section-contrast">
         <div className="container">
-          <PricingPreview />
-        </div>
-      </section>
-
-      {/* 6. Objection Handling */}
-      <section className="section py-16 md:py-20">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4">
-              Pourquoi ne pas déménager seul ?
-            </h2>
-            <p className="text-white/80 max-w-2xl mx-auto text-base md:text-lg">
-              Comparez les avantages avant de décider
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* DIY */}
-            <div className="card-glass rounded-2xl p-8">
-              <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                <span className="text-2xl">🚗</span>
-                Déménagement seul
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="text-green-400 text-xl mt-1">✓</div>
-                  <div>
-                    <div className="text-white font-medium">Économie apparente</div>
-                    <div className="text-white/70 text-sm">Location camion ~150€</div>
-                  </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#04163A] via-[#05243f] to-[#0b3b46] p-6 md:p-8 text-center shadow-[0_24px_70px_rgba(0,0,0,0.55)]">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]" />
+              <div className="relative space-y-4">
+                <div className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-white/80">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#6BCFCF]" />
+                  Sans engagement · 0 spam · 5+ devis fiables
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-red-400 text-xl mt-1">✗</div>
-                  <div>
-                    <div className="text-white font-medium">Risques élevés</div>
-                    <div className="text-white/70 text-sm">Blessures, casse, fatigue</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-red-400 text-xl mt-1">✗</div>
-                  <div>
-                    <div className="text-white font-medium">Temps important</div>
-                    <div className="text-white/70 text-sm">2-3 jours minimum</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-red-400 text-xl mt-1">✗</div>
-                  <div>
-                    <div className="text-white font-medium">Aucune assurance pro</div>
-                    <div className="text-white/70 text-sm">Casse à vos frais</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Pro avec Moverz */}
-            <div className="card-glass rounded-2xl p-8 border-2 border-[#6bcfcf]">
-              <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                <span className="text-2xl">🚚</span>
-                Avec Moverz (dès 280€)
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="text-[#6bcfcf] text-xl mt-1">✓</div>
-                  <div>
-                    <div className="text-white font-medium">Prix transparent</div>
-                    <div className="text-white/70 text-sm">5 devis comparables</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-[#6bcfcf] text-xl mt-1">✓</div>
-                  <div>
-                    <div className="text-white font-medium">Zéro risque</div>
-                    <div className="text-white/70 text-sm">Pros assurés + vérifiés</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-[#6bcfcf] text-xl mt-1">✓</div>
-                  <div>
-                    <div className="text-white font-medium">Gain de temps</div>
-                    <div className="text-white/70 text-sm">Fini en 1 journée</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="text-[#6bcfcf] text-xl mt-1">✓</div>
-                  <div>
-                    <div className="text-white font-medium">Assurance tous risques</div>
-                    <div className="text-white/70 text-sm">Casse couverte</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 text-center">
-            <a href="/inventaire-ia/" className="btn-primary">
-              Comparer 5 devis maintenant
-            </a>
-            <p className="text-white/60 text-sm mt-4">
-              ou <a href="/estimation-rapide/" className="text-[#6bcfcf] underline hover:text-[#6bcfcf]/80">estimation rapide sans photos</a> (30 secondes)
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. FAQ locales */}
-      <section className="py-12 md:py-16">
-        <LocalMoneyFAQ citySlug={city.slug} cityName={city.nameCapitalized} />
-      </section>
-
-      {/* 8. Guides photos */}
-      <section className="section py-16 md:py-20 bg-gradient-to-br from-[#04163a]/60 to-[#2b7a78]/20 border-y border-white/20">
-        <div className="container">
-          <PhotoGuidelines />
-        </div>
-      </section>
-
-      {/* 9. Zones couvertes */}
-      <section className="section py-16 md:py-20">
-        <div className="container">
-          <NeighborhoodsTeaser />
-        </div>
-      </section>
-
-      {/* 10. Ressources SEO - Maillage interne */}
-      <section className="section py-16 md:py-20 bg-gradient-to-br from-[#2b7a78]/15 to-[#6bcfcf]/10 border-y border-white/20">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4">
-              Tout pour préparer votre déménagement
-            </h2>
-            <p className="text-white/80 max-w-2xl mx-auto text-base md:text-lg">
-              Guides pratiques, informations tarifaires et conseils d'experts
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Services */}
-            <div className="card-glass rounded-2xl p-8 hover:border-[#6bcfcf]/50 transition-colors">
-              <div className="text-4xl mb-4">📦</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Nos formules</h3>
-              <p className="text-white/70 text-sm mb-6">
-                Comparez nos 3 formules de déménagement adaptées à tous les budgets
-              </p>
-              <div className="space-y-3">
-                <a href="/services/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm font-medium">
-                  → Comparer les formules
-                </a>
-                <a href={`/services/demenagement-economique-${city.slug}/`} className="block text-white/70 hover:text-white transition-colors text-sm">
-                  Économique (dès 280€)
-                </a>
-                <a href={`/services/demenagement-standard-${city.slug}/`} className="block text-white/70 hover:text-white transition-colors text-sm">
-                  Standard (dès 600€)
-                </a>
-              </div>
-            </div>
-
-            {/* Guides */}
-            <div className="card-glass rounded-2xl p-8 hover:border-[#6bcfcf]/50 transition-colors">
-              <div className="text-4xl mb-4">📚</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Guides & conseils</h3>
-              <p className="text-white/70 text-sm mb-6">
-                Tous nos articles pour bien préparer et organiser votre déménagement
-              </p>
-              <div className="space-y-3">
-                <a href="/blog/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm font-medium">
-                  → Voir tous les guides
-                </a>
-                <a href="/blog/" className="block text-white/70 hover:text-white transition-colors text-sm">
-                  Combien de cartons ?
-                </a>
-                <a href="/blog/" className="block text-white/70 hover:text-white transition-colors text-sm">
-                  Prix 2025
-                </a>
-              </div>
-            </div>
-
-            {/* FAQ */}
-            <div className="card-glass rounded-2xl p-8 hover:border-[#6bcfcf]/50 transition-colors">
-              <div className="text-4xl mb-4">❓</div>
-              <h3 className="text-xl font-semibold text-white mb-4">Questions fréquentes</h3>
-              <p className="text-white/70 text-sm mb-6">
-                Toutes les réponses aux questions que vous vous posez
-              </p>
-              <div className="space-y-3">
-                <a href="/faq/" className="block text-[#6bcfcf] hover:text-[#6bcfcf]/80 transition-colors text-sm font-medium">
-                  → Voir toutes les FAQ
-                </a>
-                <a href="/estimation-rapide/" className="block text-white/70 hover:text-white transition-colors text-sm">
-                  Estimation rapide
-                </a>
-                <a href={`/quartiers-${city.slug}/`} className="block text-white/70 hover:text-white transition-colors text-sm">
-                  Quartiers {city.nameCapitalized}
+                <h2 className="text-2xl md:text-3xl font-semibold text-white">
+                  Lancer mon comparateur de devis
+                </h2>
+                <p className="text-sm md:text-base text-white/80 max-w-xl mx-auto">
+                  Pour votre déménagement à {city.nameCapitalized}, obtenez des
+                  devis alignés sur la même base, sans appels commerciaux non
+                  souhaités.
+                </p>
+                <a href="/devis-gratuits/" className="btn-primary">
+                  Lancer mon comparateur de devis
                 </a>
               </div>
             </div>
