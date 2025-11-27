@@ -532,8 +532,16 @@ function InventaireIAPageInner() {
       const destPostalParam = searchParams.get('destPostalCode');
       const destCityParam = searchParams.get('destCity');
       const movingDateParam = searchParams.get('movingDate');
+      const movingDateEndParam = searchParams.get('movingDateEnd');
+      const dateFlexibleParam = searchParams.get('dateFlexible');
       const estimatedVolumeParam = searchParams.get('estimatedVolume');
       const surfaceM2Param = searchParams.get('surfaceM2');
+      const originHousingTypeParam = searchParams.get('originHousingType');
+      const destHousingTypeParam = searchParams.get('destHousingType');
+      const originCarryDistanceParam = searchParams.get('originCarryDistance');
+      const destCarryDistanceParam = searchParams.get('destCarryDistance');
+      const densityParam = searchParams.get('density');
+      const formuleParam = searchParams.get('formule');
       const leadIdFromUrl = searchParams.get('leadId');
 
       // leadId : l'URL est la source de vérité
@@ -580,6 +588,14 @@ function InventaireIAPageInner() {
       if (movingDateParam) {
         nextState = { ...nextState, movingDate: movingDateParam };
       }
+      if (movingDateEndParam) {
+        nextState = { ...nextState, movingDateEnd: movingDateEndParam };
+      }
+      if (dateFlexibleParam === 'true' || dateFlexibleParam === '1') {
+        nextState = { ...nextState, dateFlexible: true };
+      } else if (dateFlexibleParam === 'false' || dateFlexibleParam === '0') {
+        nextState = { ...nextState, dateFlexible: false };
+      }
 
       if (surfaceM2Param) {
         const m2 = parseInt(surfaceM2Param, 10);
@@ -591,6 +607,28 @@ function InventaireIAPageInner() {
         if (!Number.isNaN(vol) && baseState.surfaceM2 === INITIAL_FORM_STATE.surfaceM2) {
           nextState = { ...nextState, surfaceM2: Math.round(vol) };
         }
+      }
+
+      // Type de logement & distance de portage (origine / destination)
+      if (originHousingTypeParam) {
+        nextState = { ...nextState, originHousingType: originHousingTypeParam as any };
+      }
+      if (destHousingTypeParam) {
+        nextState = { ...nextState, destinationHousingType: destHousingTypeParam as any };
+      }
+      if (originCarryDistanceParam) {
+        nextState = { ...nextState, originCarryDistance: originCarryDistanceParam as any };
+      }
+      if (destCarryDistanceParam) {
+        nextState = { ...nextState, destinationCarryDistance: destCarryDistanceParam as any };
+      }
+
+      // Densité & formule (si fournies, sinon on garde les defaults du formulaire)
+      if (densityParam === 'light' || densityParam === 'normal' || densityParam === 'dense') {
+        nextState = { ...nextState, density: densityParam as any };
+      }
+      if (formuleParam === 'ECONOMIQUE' || formuleParam === 'STANDARD' || formuleParam === 'PREMIUM') {
+        nextState = { ...nextState, formule: formuleParam as any };
       }
 
       setFormState(nextState);
