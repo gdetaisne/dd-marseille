@@ -2,7 +2,7 @@
 
 export const dynamic = 'force-dynamic';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { Suspense, useState, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { FormState, INITIAL_FORM_STATE, PricingResult } from '@/lib/form-types';
 import { calculatePricing, calculateVolume, formatPrice, calculateDistance } from '@/lib/pricing';
@@ -1667,5 +1667,9 @@ function InventaireIAPageInner() {
 }
 
 export default function InventaireIAPage() {
-  return <InventaireIAPageInner />;
+  return (
+    <Suspense fallback={null}>
+      <InventaireIAPageInner />
+    </Suspense>
+  );
 }
