@@ -50,6 +50,12 @@ const nextConfig = {
       // VAGUE 2 – Migration homepage domaine → page ville moverz.fr
       { source: '/', destination: 'https://moverz.fr/demenagement/marseille/', permanent: true },
 
+      // MIGRATION BLOG → moverz.fr
+      { source: '/blog', destination: 'https://moverz.fr/blog/', permanent: true },
+      { source: '/blog/', destination: 'https://moverz.fr/blog/', permanent: true },
+      // Nouvelle structure /blog/demenagement-marseille/{slug} → moverz.fr/blog/{slug}
+      { source: '/blog/demenagement-marseille/:slug*', destination: 'https://moverz.fr/blog/:slug*', permanent: true },
+
       // Redirections historiques
       // Fichiers BATCH/PILIER/PLACEHOLDER supprimés (redirects pour Google cache)
       { source: '/blog/satellites/article-satellite-:number-placeholder', destination: '/blog/', permanent: true },
