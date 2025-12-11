@@ -56,10 +56,10 @@ const nextConfig = {
       { source: '/marseille-vers-paris/', destination: 'https://moverz.fr/marseille-vers-paris/', permanent: true },
       { source: '/marseille-vers-toulouse/', destination: 'https://moverz.fr/marseille-vers-toulouse/', permanent: true },
       // Services
-      { source: '/services/', destination: 'https://moverz.fr/services/', permanent: true },
-      { source: '/services/demenagement-economique-marseille/', destination: 'https://moverz.fr/services/demenagement-economique/', permanent: true },
-      { source: '/services/demenagement-premium-marseille/', destination: 'https://moverz.fr/services/demenagement-premium/', permanent: true },
-      { source: '/services/demenagement-standard-marseille/', destination: 'https://moverz.fr/services/demenagement-standard/', permanent: true },
+      { source: '/services/', destination: 'https://moverz.fr/', permanent: true },
+      { source: '/services/demenagement-economique-marseille/', destination: 'https://moverz.fr/', permanent: true },
+      { source: '/services/demenagement-premium-marseille/', destination: 'https://moverz.fr/', permanent: true },
+      { source: '/services/demenagement-standard-marseille/', destination: 'https://moverz.fr/', permanent: true },
       // Pages communes
       { source: '/cgu/', destination: 'https://moverz.fr/cgu/', permanent: true },
       { source: '/cgv/', destination: 'https://moverz.fr/cgv/', permanent: true },
