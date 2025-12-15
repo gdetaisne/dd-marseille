@@ -45,6 +45,12 @@ const nextConfig = {
       { source: '/blog/', destination: 'https://moverz.fr/blog/', permanent: true },
       // Blog articles → moverz.fr (spécifiques d'abord)
       { source: '/blog/demenagement-marseille/autorisation-stationnement-demenagement', destination: 'https://moverz.fr/blog/autorisation-stationnement-demenagement-marseille/', permanent: true },
+      // Liens internes ville (self-référence) → moverz.fr
+      { source: '/demenagement/marseille', destination: 'https://moverz.fr/demenagement/marseille/', permanent: true },
+      { source: '/quartiers-marseille', destination: 'https://moverz.fr/quartiers-marseille/', permanent: true },
+      // Liens partenaires/devis → moverz.fr
+      { source: '/partenaires', destination: 'https://moverz.fr/partenaires/', permanent: true },
+      { source: '/devis-gratuits', destination: 'https://moverz.fr/devis-gratuits/', permanent: true },
       // Catch-all blog articles (any slug) → moverz.fr
       { source: '/blog/:slug*', destination: 'https://moverz.fr/blog/:slug*', permanent: true },
       // Quartiers cross-ville → moverz.fr
