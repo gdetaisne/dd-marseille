@@ -45,6 +45,21 @@ const nextConfig = {
       { source: '/blog/', destination: 'https://moverz.fr/blog/', permanent: true },
       // Blog articles → moverz.fr (spécifiques d'abord)
       { source: '/blog/demenagement-marseille/autorisation-stationnement-demenagement', destination: 'https://moverz.fr/blog/autorisation-stationnement-demenagement-marseille/', permanent: true },
+      // Anciens formats d'URL (legacy)
+      // Blog double-path : /blog/{category}/{slug} → moverz.fr/blog/{slug}/
+      { source: '/blog/:category/:slug*', destination: 'https://moverz.fr/blog/:slug*', permanent: true },
+      // Quartiers individuels : /{ville}/{quartier} → moverz.fr/{ville}/{quartier}/
+      { source: '/nice/:quartier', destination: 'https://moverz.fr/nice/:quartier/', permanent: true },
+      { source: '/lyon/:quartier', destination: 'https://moverz.fr/lyon/:quartier/', permanent: true },
+      { source: '/marseille/:quartier', destination: 'https://moverz.fr/marseille/:quartier/', permanent: true },
+      { source: '/toulouse/:quartier', destination: 'https://moverz.fr/toulouse/:quartier/', permanent: true },
+      { source: '/bordeaux/:quartier', destination: 'https://moverz.fr/bordeaux/:quartier/', permanent: true },
+      { source: '/lille/:quartier', destination: 'https://moverz.fr/lille/:quartier/', permanent: true },
+      { source: '/strasbourg/:quartier', destination: 'https://moverz.fr/strasbourg/:quartier/', permanent: true },
+      { source: '/nantes/:quartier', destination: 'https://moverz.fr/nantes/:quartier/', permanent: true },
+      { source: '/rennes/:quartier', destination: 'https://moverz.fr/rennes/:quartier/', permanent: true },
+      { source: '/rouen/:quartier', destination: 'https://moverz.fr/rouen/:quartier/', permanent: true },
+      { source: '/montpellier/:quartier', destination: 'https://moverz.fr/montpellier/:quartier/', permanent: true },
       // Liens internes ville (self-référence) → moverz.fr
       { source: '/demenagement/marseille', destination: 'https://moverz.fr/demenagement/marseille/', permanent: true },
       { source: '/quartiers-marseille', destination: 'https://moverz.fr/quartiers-marseille/', permanent: true },
