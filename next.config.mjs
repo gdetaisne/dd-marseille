@@ -79,12 +79,7 @@ const nextConfig = {
       { source: '/mentions-legales/', destination: 'https://moverz.fr/mentions-legales/', permanent: true },
       { source: '/notre-offre/', destination: 'https://moverz.fr/notre-offre/', permanent: true },
       { source: '/partenaires/', destination: 'https://moverz.fr/partenaires/', permanent: true },
-      { source: '/politique-confidentialite/', destination: 'https://moverz.fr/politique-confidentialite/', permanent: true },
-    ];
-
-    const blogToMoverz = getMoverzBlogRedirectsForHost(HOST);
-
-          // Fix liens cassés (trailing slash + cross-city)
+      { source: '/politique-confidentialite/', destination: 'https://moverz.fr/politique-confidentialite/', permanent: true },          // Fix liens cassés (trailing slash + cross-city)
       // Trailing slash: /a-propos
       { source: '/a-propos', destination: '/a-propos/', permanent: true },
       // Trailing slash: /pro
@@ -112,7 +107,11 @@ const nextConfig = {
       { source: '/demenagement/paris', destination: 'https://moverz.fr/demenagement/paris/', permanent: true },
       { source: '/demenagement/grenoble', destination: 'https://moverz.fr/demenagement/grenoble/', permanent: true },
 
-      return [...existing, ...blogToMoverz];
+    ];
+
+    const blogToMoverz = getMoverzBlogRedirectsForHost(HOST);
+
+    return [...existing, ...blogToMoverz];
   }
 };
 
