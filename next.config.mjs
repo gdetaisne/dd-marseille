@@ -151,24 +151,24 @@ const nextConfig = {
       { source: '/montpellier/:quartier', destination: 'https://moverz.fr/montpellier/:quartier/', permanent: true },
       // Liens internes ville (self-référence) → moverz.fr
       { source: '/demenagement/marseille', destination: 'https://moverz.fr/demenagement/marseille/', permanent: true },
-      { source: '/quartiers-marseille', destination: 'https://moverz.fr/quartiers-marseille/', permanent: true },
+      { source: '/quartiers-marseille', destination: 'https://moverz.fr/demenagement/marseille/', permanent: true },
       // Liens partenaires/devis → moverz.fr
       { source: '/partenaires', destination: 'https://moverz.fr/partenaires/', permanent: true },
       { source: '/devis-gratuits', destination: 'https://moverz.fr/devis-gratuits/', permanent: true },
       // Catch-all blog articles (any slug) → moverz.fr
       { source: '/blog/:slug*', destination: 'https://moverz.fr/blog/:slug*', permanent: true },
       // Quartiers cross-ville → moverz.fr
-      { source: '/quartiers-nice', destination: 'https://moverz.fr/quartiers-nice/', permanent: true },
-      { source: '/quartiers-lyon', destination: 'https://moverz.fr/quartiers-lyon/', permanent: true },
-      { source: '/quartiers-marseille', destination: 'https://moverz.fr/quartiers-marseille/', permanent: true },
-      { source: '/quartiers-toulouse', destination: 'https://moverz.fr/quartiers-toulouse/', permanent: true },
-      { source: '/quartiers-bordeaux', destination: 'https://moverz.fr/quartiers-bordeaux/', permanent: true },
-      { source: '/quartiers-lille', destination: 'https://moverz.fr/quartiers-lille/', permanent: true },
-      { source: '/quartiers-strasbourg', destination: 'https://moverz.fr/quartiers-strasbourg/', permanent: true },
-      { source: '/quartiers-nantes', destination: 'https://moverz.fr/quartiers-nantes/', permanent: true },
-      { source: '/quartiers-rennes', destination: 'https://moverz.fr/quartiers-rennes/', permanent: true },
-      { source: '/quartiers-rouen', destination: 'https://moverz.fr/quartiers-rouen/', permanent: true },
-      { source: '/quartiers-montpellier', destination: 'https://moverz.fr/quartiers-montpellier/', permanent: true },
+      { source: '/quartiers-nice', destination: 'https://moverz.fr/demenagement/nice/', permanent: true },
+      { source: '/quartiers-lyon', destination: 'https://moverz.fr/demenagement/lyon/', permanent: true },
+      { source: '/quartiers-marseille', destination: 'https://moverz.fr/demenagement/marseille/', permanent: true },
+      { source: '/quartiers-toulouse', destination: 'https://moverz.fr/demenagement/toulouse/', permanent: true },
+      { source: '/quartiers-bordeaux', destination: 'https://moverz.fr/demenagement/bordeaux/', permanent: true },
+      { source: '/quartiers-lille', destination: 'https://moverz.fr/demenagement/lille/', permanent: true },
+      { source: '/quartiers-strasbourg', destination: 'https://moverz.fr/demenagement/strasbourg/', permanent: true },
+      { source: '/quartiers-nantes', destination: 'https://moverz.fr/demenagement/nantes/', permanent: true },
+      { source: '/quartiers-rennes', destination: 'https://moverz.fr/demenagement/rennes/', permanent: true },
+      { source: '/quartiers-rouen', destination: 'https://moverz.fr/demenagement/rouen/', permanent: true },
+      { source: '/quartiers-montpellier', destination: 'https://moverz.fr/demenagement/montpellier/', permanent: true },
       { source: '/blog/demenagement-marseille/autorisation-stationnement-demenagement/', destination: 'https://moverz.fr/blog/autorisation-stationnement-demenagement-marseille/', permanent: true },
       // Blog articles → moverz.fr (règle générique)
       { source: '/blog/demenagement-marseille/:slug*', destination: 'https://moverz.fr/blog/:slug*', permanent: true },
@@ -180,7 +180,7 @@ const nextConfig = {
       { source: '/marseille/plaine/', destination: 'https://moverz.fr/marseille/plaine/', permanent: true },
       { source: '/marseille/vieux-port/', destination: 'https://moverz.fr/marseille/vieux-port/', permanent: true },
       // Hub quartiers marseille
-      { source: '/quartiers-marseille/', destination: 'https://moverz.fr/quartiers-marseille/', permanent: true },
+      { source: '/quartiers-marseille/', destination: 'https://moverz.fr/demenagement/marseille/', permanent: true },
       // Corridors depuis marseille (5 pages)
       { source: '/marseille-vers-espagne/', destination: 'https://moverz.fr/marseille-vers-espagne/', permanent: true },
       { source: '/marseille-vers-lyon/', destination: 'https://moverz.fr/marseille-vers-lyon/', permanent: true },
